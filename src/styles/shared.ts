@@ -96,7 +96,7 @@ export const SocialLink = css`
 
   svg {
     height: 1.8rem;
-    fill: #fff;
+    fill: ${colors.baseLight};
   }
 `;
 
@@ -125,7 +125,7 @@ export const SiteHeaderStyles = css`
   padding-bottom: 12px;
   color: #fff;
   /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-  background: ${lighten('-0.05', colors.darkgrey)} no-repeat center center;
+  background: #fff no-repeat center center;
   background-size: cover;
 
   :before {

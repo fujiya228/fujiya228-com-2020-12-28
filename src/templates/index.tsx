@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { css } from '@emotion/react';
 
 import { Footer } from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
+import SiteNav, { SiteNavMain } from '../components/header/SiteNav';
 import Pagination from '../components/Pagination';
 import { PostCard } from '../components/PostCard';
 import { Wrapper } from '../components/Wrapper';
@@ -16,12 +16,7 @@ import {
   outer,
   PostFeed,
   Posts,
-  SiteDescription,
-  SiteHeader,
-  SiteHeaderContent,
   SiteMain,
-  SiteTitle,
-  SiteHeaderStyles,
 } from '../styles/shared';
 import config from '../website-config';
 import { PageContext } from './post';
@@ -90,31 +85,13 @@ const IndexPage: React.FC<IndexProps> = props => {
         <meta property="og:image:height" content={height.toString()} />
       </Helmet>
       <Wrapper>
-        <div
-          css={[outer, SiteHeader, SiteHeaderStyles]}
-          className="site-header-background"
-          style={{
-            backgroundImage: `url('${props.data.header.childImageSharp.fixed.src}')`,
-          }}
-        >
-          <div css={inner}>
-            <SiteNav isHome />
-            <SiteHeaderContent className="site-header-conent">
-              <SiteTitle className="site-title">
-                {props.data.logo ? (
-                  <img
-                    style={{ maxHeight: '55px' }}
-                    src={props.data.logo.childImageSharp.fixed.src}
-                    alt={config.title}
-                  />
-                ) : (
-                  config.title
-                )}
-              </SiteTitle>
-              <SiteDescription>{config.description}</SiteDescription>
-            </SiteHeaderContent>
+        <header className="site-header">
+          <div css={[outer, SiteNavMain]}>
+            <div css={inner}>
+              <SiteNav isHome />
+            </div>
           </div>
-        </div>
+        </header>
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={[inner, Posts]}>
             <div css={[PostFeed]}>
@@ -265,6 +242,10 @@ const HomePosts = css`
       font-size: 1.8rem;
       line-height: 1.5em;
     }
+  }
+
+  #site-main{
+    margin-top: 64px;
   }
 `;
 
