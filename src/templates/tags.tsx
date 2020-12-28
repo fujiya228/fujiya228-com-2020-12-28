@@ -90,7 +90,7 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
         >
           <div css={[outer, SiteNavMain]}>
             <div css={inner}>
-              <SiteNav isHome={false} />
+              <SiteNav isHome />
             </div>
           </div>
           <ResponsiveHeaderBackground
@@ -103,13 +103,14 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
               <SiteDescription className="site-description">
                 {tagData?.node.description ? (
                   tagData.node.description
-                ) : (
-                  <>
-                    A collection of {totalCount > 1 && `${totalCount} posts`}
-                    {totalCount === 1 && '1 post'}
-                    {totalCount === 0 && 'No posts'}
-                  </>
-                )}
+                ) :
+                  (
+                    <>
+                      A collection of {totalCount > 1 && `${totalCount} posts`}
+                      {totalCount === 1 && '1 post'}
+                      {totalCount === 0 && 'No posts'}
+                    </>
+                  )}
               </SiteDescription>
             </SiteHeaderContent>
           </ResponsiveHeaderBackground>
