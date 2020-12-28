@@ -12,4 +12,11 @@ export const colors = {
   brown: '#a3821a',
   // darkmode: color(var(--darkgrey) l(+2%)),
   darkmode: '#191b1f',
+  link: '#0d5cf8',
+  linkLight: '#6c89ff',
+  main: '#ff8d3f',
+  mainLight: '#ffbe6e',
+  base: '#2f2f28',
+  baseLight: '#56564f',
+  hover: '#ccc',
 };

@@ -454,6 +454,7 @@ export const query = graphql`
         title
         userDate: date(formatString: "D MMMM YYYY")
         date
+        category
         tags
         excerpt
         image {
