@@ -115,7 +115,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
         <header className="site-archive-header" css={[SiteHeader, SiteArchiveHeader]}>
           <div css={[outer, SiteNavMain]}>
             <div css={inner}>
-              <SiteNav isHome={false} />
+              <SiteNav isHome />
             </div>
           </div>
 
