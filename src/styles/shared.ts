@@ -24,7 +24,8 @@ export const SiteNavMain = css`
   left: 0;
   z-index: 1000;
   /* background: color(var(--darkgrey) l(-5%)); */
-  background: ${lighten('-0.05', colors.darkgrey)};
+  background: #fff;
+  box-shadow: 2px 4px 10px rgba(0,0,0,.2);
 `;
 
 export const SiteMain = css`
