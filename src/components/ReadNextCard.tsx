@@ -80,17 +80,15 @@ const ReadNextCardArticle = styled.article`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0 25px 50px;
-  padding: 25px;
+  margin: 0 12px 80px;
+  padding: 24px 16px;
   /* background: linear-gradient(
     color(var(--darkgrey) l(+2%)),
     color(var(--darkgrey) l(-5%))
   ); */
-  background: linear-gradient(
-    ${lighten('0.02', colors.darkgrey)},
-    ${lighten('-0.05', colors.darkgrey)}
-  );
+  background: #fff;
   border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(60,64,67,.3), 0px 4px 8px 3px rgba(60,64,67,.15);
 
   a {
     transition: all 0.2s ease-in-out;
@@ -102,20 +100,15 @@ const ReadNextCardArticle = styled.article`
 
   @media (max-width: 1170px) {
     flex: 1 1 261px;
-    margin-bottom: 5vw;
   }
 
   @media (max-width: 650px) {
-    flex: 1 1 auto;
-    margin: 0 25px;
-    padding: 0;
-    background: none;
+    flex: 1 1 50%;
   }
 `;
 
 const ReadNextCardHeaderTitle = styled.h3`
   margin: 0;
-  color: rgba(255, 255, 255, 0.6);
   font-size: 1.2rem;
   line-height: 1em;
   font-weight: 300;
@@ -123,7 +116,6 @@ const ReadNextCardHeaderTitle = styled.h3`
   text-transform: uppercase;
 
   a {
-    color: #fff;
     font-weight: 500;
     text-decoration: none;
     opacity: 0.8;
@@ -168,7 +160,6 @@ const ReadNextCardContent = styled.div`
 
   li a {
     display: block;
-    color: #fff;
     opacity: 0.8;
   }
 
@@ -185,7 +176,6 @@ const ReadNextCardMeta = styled.div`
 
   p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.6);
   }
 `;
 
@@ -195,8 +185,7 @@ const ReadNextCardFooter = styled.footer`
 
   a {
     padding: 7px 12px 8px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 1.3rem;
     border-radius: 999px;
     transition: all 0.35s ease-in-out;
@@ -204,8 +193,8 @@ const ReadNextCardFooter = styled.footer`
 
   a:hover {
     /* border-color: var(--yellow); */
-    border-color: ${colors.yellow};
-    color: ${colors.yellow};
+    border-color: ${colors.link};
+    color: ${colors.link};
     text-decoration: none;
   }
 `;
