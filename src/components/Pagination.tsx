@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { darken } from 'polished';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 import { colors } from '../styles/colors';
 
@@ -20,9 +20,8 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
     <nav css={navCss}>
       <div>
         {!isFirst && (
-          <Link to={prevPage} rel="prev">
-            {/* << symbol */}
-            {String.fromCharCode(171)}
+          <Link to={prevPage} rel="prev" className="prev">
+            <ArrowIcon />
           </Link>
         )}
 
@@ -33,9 +32,8 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
         ))}
 
         {!isLast && (
-          <Link to={nextPage} rel="next">
-            {/* >> symbol */}
-            {String.fromCharCode(187)}
+          <Link to={nextPage} rel="next" className="next">
+            <ArrowIcon />
           </Link>
         )}
       </div>
@@ -47,6 +45,7 @@ const navCss = css`
   text-align: center;
   div {
     display: inline-block;
+    padding: 0 0 40px;
   }
 
   a {
@@ -54,20 +53,21 @@ const navCss = css`
     background: #fff;
     color: black;
     float: left;
-    padding: 8px 16px;
+    padding: 0 8px;
     text-decoration: none;
     transition: background-color .3s;
     border: 1px solid #ddd;
     margin: 0 4px;
     box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-    min-width: 50px;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    line-height: 46px;
 
     &.active {
-      -webkit-box-shadow:inset 3px 0px 0px 0px ${darken(0.05, colors.darkgrey)};
-      -moz-box-shadow:inset 3px 0px 0px 0px ${darken(0.05, colors.darkgrey)};
-      box-shadow:inset 3px 0px 0px 0px ${darken(0.05, colors.darkgrey)};
+      boder: 1px solid ${colors.base};
+      background: ${colors.base};
+      color: #fff;
     }
 
     &:hover:not(.active) {
@@ -77,6 +77,39 @@ const navCss = css`
     &:hover {
       text-decoration: none;
     }
+  }
+
+  
+  .prev {
+    transform: rotate(-45deg);
+  }
+
+  .next {
+    transform: rotate(135deg);
+  }
+`;
+
+const ArrowIcon = styled.i`
+  display: block;
+  position: relative;
+  top: 16px;
+  width: 13.2px;
+  height: 4px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: ${colors.base};
+  transition: .3s ease-in-out;
+  &::before {
+    display: block;
+    position: absolute;
+    width: 13.2px;
+    height: 4px;
+    margin: 0 auto;
+    transform: rotate(90deg);
+    transform-origin: 2px;
+    border-radius: 2px;
+    background: ${colors.base};
+    content: '';
   }
 `;
 
