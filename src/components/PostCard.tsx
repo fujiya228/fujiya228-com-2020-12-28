@@ -44,19 +44,19 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
         </Link>
       )}
       <PostCardContent className="post-card-content">
-        <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
-          <PostCardHeader className="post-card-header">
-            {post.frontmatter.tags && (
-              <PostCardPrimaryTag className="post-card-primary-tag">
-                {post.frontmatter.tags[0]}
-              </PostCardPrimaryTag>
-            )}
+        <PostCardHeader className="post-card-header">
+          <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
             <PostCardTitle className="post-card-title">{post.frontmatter.title}</PostCardTitle>
-          </PostCardHeader>
-          <PostCardExcerpt className="post-card-excerpt">
-            <p>{post.frontmatter.excerpt || post.excerpt}</p>
-          </PostCardExcerpt>
-        </Link>
+          </Link>
+          {post.frontmatter.tags && (
+            <PostCardPrimaryTag className="post-card-primary-tag">
+              {post.frontmatter.tags[0]}
+            </PostCardPrimaryTag>
+          )}
+        </PostCardHeader>
+        <PostCardExcerpt className="post-card-excerpt">
+          <p>{post.frontmatter.excerpt || post.excerpt}</p>
+        </PostCardExcerpt>
         <PostCardMeta className="post-card-meta">
           <AuthorList authors={post.frontmatter.author} tooltip="small" />
           <PostCardBylineContent className="post-card-byline-content">
@@ -128,14 +128,6 @@ const PostCardLarge = css`
       font-size: 3.2rem;
     }
 
-    .post-card-content-link {
-      padding: 0 0 0 40px;
-    }
-
-    .post-card-meta {
-      padding: 0 0 0 40px;
-    }
-
     .post-card-excerpt p {
       margin-bottom: 1.5em;
       font-size: 1.8rem;
@@ -193,6 +185,7 @@ const PostCardTitle = styled.h2`
   margin: 0 0 0.4em;
   line-height: 1.15em;
   transition: color 0.2s ease-in-out;
+  color: ${colors.link};
 
   @media (prefers-color-scheme: dark) {
     color: rgba(255, 255, 255, 0.85);
@@ -246,6 +239,29 @@ const PostCardBylineContent = styled.div`
 
 const PostCardHeader = styled.header`
   margin: 15px 0 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+  a:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  h2:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: -4px;
+    left: 0px;
+    height: 1px;
+    background: ${colors.link};
+    opacity: 0.25;
+    transition: all 0.35s ease-in-out;
+  }
+
+  a:hover h2:before {
+    right: 12px;
+    opacity: 0.5;
+  }
 `;
 
 export const StaticAvatar = css`

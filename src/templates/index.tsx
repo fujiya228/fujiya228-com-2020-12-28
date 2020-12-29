@@ -220,21 +220,13 @@ const HomePosts = css`
 
     .post-card-large .post-card-content {
       flex: 0 1 361px;
-      padding: 0;
+      padding: 0 8px 0 40px;
       justify-content: center;
     }
 
     .post-card-large .post-card-title {
       margin-top: 0;
       font-size: 3.2rem;
-    }
-
-    .post-card-large .post-card-content-link {
-      padding: 0 0 0 40px;
-    }
-
-    .post-card-large .post-card-meta {
-      padding: 0 0 0 40px;
     }
 
     .post-card-large .post-card-excerpt p {
