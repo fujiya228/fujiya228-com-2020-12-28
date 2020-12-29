@@ -13,8 +13,16 @@ export interface PaginationProps {
 const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, numPages }) => {
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
+  const numLinks = numPages <= 5 ? numPages : 5;
   const prevPage = currentPage - 1 === 1 ? '/' : '/' + (currentPage - 1).toString();
   const nextPage = '/' + (currentPage + 1).toString();
+  let numStart = 1;
+
+  if (numPages > 5) {
+    if (currentPage > 3) {
+      numStart = currentPage + 2 >= numPages ? numPages - 4 : currentPage - 2;
+    }
+  }
 
   return (
     <nav css={navCss}>
@@ -25,9 +33,9 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
           </Link>
         )}
 
-        {Array.from({ length: numPages }, (_, i) => (
-          <Link key={`pagination-number${i + 1}`} className={i + 1 === currentPage ? 'active' : ''} to={`/${i === 0 ? '' : i + 1}`}>
-            {i + 1}
+        {Array.from({ length: numLinks }, (_, i) => (
+          <Link key={`pagination-number${i + numStart}`} className={i + numStart === currentPage ? 'active' : ''} to={`/${i + numStart === 1 ? '' : i + numStart}`}>
+            {i + numStart}
           </Link>
         ))}
 
@@ -44,7 +52,8 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
 const navCss = css`
   text-align: center;
   div {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding: 0 0 40px;
   }
 
@@ -82,10 +91,18 @@ const navCss = css`
   
   .prev {
     transform: rotate(-45deg);
+    display: none;
+    @media (min-width: 480px) {
+      display: inline;
+    }
   }
 
   .next {
     transform: rotate(135deg);
+    display: none;
+    @media (min-width: 480px) {
+      display: inline;
+    }
   }
 `;
 
