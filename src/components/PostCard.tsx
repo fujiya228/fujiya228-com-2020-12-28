@@ -259,7 +259,7 @@ const PostCardHeader = styled.header`
   }
 
   a:hover h2:before {
-    right: 12px;
+    right: 0;
     opacity: 0.5;
   }
 `;

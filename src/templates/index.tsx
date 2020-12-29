@@ -220,7 +220,7 @@ const HomePosts = css`
 
     .post-card-large .post-card-content {
       flex: 0 1 361px;
-      padding: 0 8px 0 40px;
+      padding: 16px 32px;
       justify-content: center;
     }
 
