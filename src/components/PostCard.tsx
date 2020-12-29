@@ -26,9 +26,8 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
 
   return (
     <article
-      className={`post-card ${post.frontmatter.image ? '' : 'no-image'} ${
-        large ? 'post-card-large' : ''
-      }`}
+      // post-card-large のstyleはtemplate/index.tsxに
+      className={`post-card ${post.frontmatter.image ? '' : 'no-image'} ${large ? 'post-card-large' : ''}`}
       css={[PostCardStyles, large && PostCardLarge]}
     >
       {post.frontmatter.image && (
@@ -88,17 +87,17 @@ const PostCardStyles = css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0 0 40px;
-  padding: 0 20px 40px;
+  margin: 0 12px 80px;
   min-height: 220px;
   background-size: cover;
+  box-shadow: 0px 1px 3px 0px rgba(60,64,67,.3),0px 4px 8px 3px rgba(60,64,67,.15);
+  border-radius: 4px;
 `;
 
 const PostCardLarge = css`
   @media (min-width: 795px) {
     flex: 1 1 100%;
     flex-direction: row;
-    padding-bottom: 40px;
     min-height: 280px;
     border-top: 0;
 
@@ -149,7 +148,6 @@ const PostCardImageLink = css`
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 5px 5px 0 0;
 `;
 
 const PostCardImage = styled.div`
@@ -167,6 +165,7 @@ const PostCardContent = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding: 16px;
 `;
 
 const PostCardContentLink = css`

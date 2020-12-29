@@ -192,7 +192,6 @@ const HomePosts = css`
     .post-card-large {
       flex: 1 1 100%;
       flex-direction: row;
-      padding-bottom: 40px;
       min-height: 280px;
       border-top: 0;
     }
@@ -221,6 +220,7 @@ const HomePosts = css`
 
     .post-card-large .post-card-content {
       flex: 0 1 361px;
+      padding: 0;
       justify-content: center;
     }
 

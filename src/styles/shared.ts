@@ -64,7 +64,8 @@ export const SiteDescription = styled.h2`
 `;
 
 export const Posts = css`
-  overflow-x: hidden;
+  /* 使われていたのはtemplate/index.tsxのみなので排除 */
+  /* overflow-x: hidden; */
 `;
 
 export const PostFeed = css`
