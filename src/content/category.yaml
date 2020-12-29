@@ -1,0 +1,6 @@
+- id: Sample-category
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: Python
+  description: Create an application using python.
+  image: img/welcome-copy.png

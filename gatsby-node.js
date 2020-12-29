@@ -61,6 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               title
               tags
+              category
               date
               draft
               excerpt
@@ -180,6 +181,28 @@ exports.createPages = async ({ graphql, actions }) => {
         tag,
       },
     });
+  });
+
+  // Create category pages
+  const categoryTemplate = path.resolve('./src/templates/categories.tsx');
+  const categories = _.uniq(
+    _.flatten(
+      result.data.allMarkdownRemark.edges.map(edge => {
+        return _.castArray(_.get(edge, 'node.frontmatter.category', []));
+      }),
+    ),
+  );
+  categories.forEach(category => {
+    if (category !== null) {
+      createPage({
+        path: `/categories/${_.kebabCase(category)}/`,
+        component: categoryTemplate,
+        // component: tagTemplate,
+        context: {
+          category,
+        },
+      });
+    }
   });
 
   // Create author pages
