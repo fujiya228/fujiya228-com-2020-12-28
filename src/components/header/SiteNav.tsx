@@ -74,7 +74,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
 
   render() {
     const { isHome = false, isPost = false, post = {} } = this.props;
-    const categoryLink = `/categories/${post.category}`;
+    const categoryLink = `/categories/${post.category}`.toLowerCase();
     return (
       <nav css={SiteNavStyles}>
         <SiteNavLeft className="site-nav-left">
