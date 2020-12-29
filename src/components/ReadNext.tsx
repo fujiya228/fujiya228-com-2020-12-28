@@ -1,4 +1,3 @@
-import { lighten } from 'polished';
 import React from 'react';
 
 import styled from '@emotion/styled';
