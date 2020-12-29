@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 
 import SiteNav from '../components/header/SiteNav';
 import { PostCard } from '../components/PostCard';
+import { Footer } from '../components/Footer';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import { colors } from '../styles/colors';
@@ -53,6 +54,7 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
             </div>
           </div>
         </main>
+        <Footer />
       </Wrapper>
     </IndexLayout>
   );

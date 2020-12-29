@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import { setLightness } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
@@ -33,11 +32,6 @@ export const Footer: React.FC = () => {
             </a>
           )}
 
-          <a href="https://github.com/scttcper/gatsby-casper" target="_blank" rel="noopener noreferrer">
-            Casper
-          </a>
-
-          <a href="/rss.xml">RSS</a>
         </SiteFooterNav>
       </div>
     </footer>
@@ -49,7 +43,7 @@ const SiteFooter = css`
   padding-top: 20px;
   padding-bottom: 60px;
   color: #fff;
-  background: ${setLightness('0.0015', colors.darkgrey)};
+  background: ${colors.base};
 `;
 
 const SiteFooterContent = css`
