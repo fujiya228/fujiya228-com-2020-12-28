@@ -113,7 +113,7 @@ const forms = css`
     width : 200px;
     border-radius: 3px;
     padding: 4px;
-    background: ${colors.link};
+    background: ${colors.base};
     color: #fff;
     transition: .2s ease;
     &:hover {
