@@ -58,6 +58,7 @@ const Contact: React.FC = () => (
               <div className="post-content" css={forms}>
                 <p>お問い合わせは以下のフォームより送信できます。</p>
                 <form name="contact" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact" />
                   <p>
                     <label>お名前 (必須)<br /><input className="contact" type="text" name="name" /></label>
                   </p>
