@@ -12,6 +12,7 @@ import { Twitter } from '../icons/twitter';
 import { Contact } from '../icons/contact';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
+import { kebabCase } from '../../utils/utils';
 
 interface SiteNavProps {
   isHome?: boolean;
@@ -75,7 +76,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
 
   render() {
     const { isHome = false, isPost = false, post = {} } = this.props;
-    const categoryLink = `/categories/${post.category}`.toLowerCase();
+    const categoryLink = `/categories/${kebabCase(post.category)}`;
     return (
       <nav css={SiteNavStyles}>
         <SiteNavLeft className="site-nav-left">
