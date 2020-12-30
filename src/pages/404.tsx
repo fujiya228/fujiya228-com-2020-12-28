@@ -117,7 +117,6 @@ const ErrorContent = css`
 
   @media (min-width: 940px) {
     .post-card {
-      margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none;
     }
