@@ -19,6 +19,7 @@ import { colors } from '../styles/colors';
 import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
+import TableOfContents from '../components/TableOfContents';
 
 export interface Author {
   id: string;
@@ -43,6 +44,7 @@ interface PageTemplateProps {
       htmlAst: any;
       excerpt: string;
       timeToRead: string;
+      tableOfContents: string;
       frontmatter: {
         title: string;
         date: string;
@@ -179,6 +181,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </div>
           </div>
         </header>
+        <TableOfContents tableOfContents={post.tableOfContents} />
         <main id="site-main" className="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             {/* TODO: no-image css tag? */}
@@ -412,6 +415,7 @@ export const query = graphql`
       htmlAst
       excerpt
       timeToRead
+      tableOfContents(absolute: false)
       frontmatter {
         title
         userDate: date(formatString: "D MMMM YYYY")
