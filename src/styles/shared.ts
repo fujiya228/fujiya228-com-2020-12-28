@@ -199,7 +199,6 @@ export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string 
     color: #fff;
     background-size: cover;
     /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-    background: #090a0b no-repeat 50%;
     background-image: url(${p.backgroundImage});
 
     :before {
