@@ -57,7 +57,7 @@ const Contact: React.FC = () => (
             <PostFullContent className="post-full-content">
               <div className="post-content" css={forms}>
                 <p>お問い合わせは以下のフォームより送信できます。</p>
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-sucess">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-success">
                   <input type="hidden" name="form-name" value="contact" />
                   <p className="bot-field">
                     <input type="hidden" name="bot-field" />
