@@ -56,43 +56,32 @@ const About: React.FC = () => (
 
             <PostFullContent className="post-full-content">
               <div className="post-content">
-                <h5>
-                  A starter template for Gatsby <br /> GitHub: <a href="https://github.com/scttcper/gatsby-casper">scttcper/gatsby-casper</a>
-                </h5>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus leo,
-                  non tempus magna vehicula ac. Maecenas mollis ante finibus pharetra imperdiet.
-                  Maecenas in aliquam purus. Nam et massa a nulla fermentum dapibus sit amet in
-                  neque. Ut ipsum ipsum, rhoncus a sodales pellentesque, interdum a elit. Nullam
-                  aliquam tellus nibh, eget laoreet dui aliquet non. Vestibulum malesuada ante at
-                  diam tempus, ac interdum risus scelerisque. Sed ipsum neque, vulputate porta diam
-                  eget, consequat blandit nulla. Integer volutpat velit vitae purus lacinia aliquam.
-                  Integer bibendum ipsum vitae magna pulvinar, nec vehicula dolor vulputate. Nulla
-                  eu massa id orci placerat finibus vel sit amet eros. Vestibulum quis consequat
-                  massa. Sed sagittis sollicitudin massa at commodo. Praesent diam nisi, imperdiet
-                  posuere eleifend nec, blandit ac massa.
+                  21卒Webエンジニア / 個人開発 / セルフマネジメント<br />Vue.js , Firebaseでいろいろ作るのが好きです！
                 </p>
                 <p>
-                  Vestibulum semper pretium ipsum nec congue. Ut ac eros nisi. Donec leo sem,
-                  aliquam mollis sapien ultrices, dapibus congue diam. Proin viverra dapibus
-                  blandit. Ut mauris tellus, tristique id felis vel, venenatis vestibulum nunc. Nam
-                  molestie pulvinar nibh, eget egestas augue. Maecenas tellus arcu, mattis ut ipsum
-                  non, sollicitudin convallis nunc. Donec nec neque tristique, aliquet lacus id,
-                  laoreet nunc. Cras dapibus nisi nulla, ullamcorper faucibus neque suscipit ac.
-                  Donec eget orci venenatis justo lobortis volutpat. Proin vel placerat nisl.
-                  Integer arcu nunc, sodales eu fringilla non, aliquam non diam. Cras placerat,
-                  massa et faucibus pretium, ante elit tincidunt tellus, tristique ultricies velit
-                  quam et massa.
+                  最近は、知識をどうやったら効率よくまとめて、引き出せるか悩んでいます。<br />Notionにメモとしてまとめていましたが、階層構造が深くなるにつれてアクセスするのが大変になってきました。
                 </p>
                 <p>
-                  In nunc lacus, dapibus vitae lacus sit amet, efficitur iaculis neque. Suspendisse
-                  ut tellus quis leo vestibulum tincidunt. Aenean nec enim ac dolor lacinia semper.
-                  Ut sed laoreet libero. Nunc elementum sollicitudin accumsan. Nunc eu augue neque.
-                  Proin a tortor nibh. Cras eu nisl ornare sapien feugiat pellentesque. Mauris
-                  dignissim vel quam eu pellentesque. Integer sit amet posuere quam, eu ullamcorper
-                  odio. Nullam a lacus tempus sapien dignissim ullamcorper. In hac habitasse platea
-                  dictumst. Proin quis massa aliquam, feugiat tortor sit amet, tincidunt urna. Donec
-                  posuere pulvinar lectus, ac semper ipsum vulputate quis.
+                  そこで、あらかじめ視覚的に整理しておくことでアクセスしやすくなるのでは？と考えて作ってみたのが<a href="https://fujiya-knowledge-map.web.app">こちら</a>です。
+                </p>
+                <p>
+                  書籍以外にも動画などで様々な情報が得られる時代ですが、得た情報を自分なりにまとめて整理し知識とすることは必須であり重要だと考えています。
+                </p>
+                <p>
+                  「人間の新しい外部記憶装置」として、情報を即座に、整理して、アクセスできて、思い出せるようなアプリケーションにすることが目標です！
+                </p>
+                <h2>これからやりたいこと</h2>
+                <p>
+                  まだまだ駆け出したばかりですので、様々なことに興味があります。
+                </p>
+                <p>
+                  が、将来的には様々なサービスを素早く作って成長させていきたいので、
+                  フロントエンド、バックエンド、インフラの全体的なことを学ぶことはもちろん、
+                  どのように開発・運用していくか？といった部分を考えていきたいです！
+                </p>
+                <p>
+                  直近ではマイクロサービスアーキテクチャについての理解を深めたいので、個人的に簡単なサービスを作ってみたいと考えています！
                 </p>
               </div>
             </PostFullContent>
