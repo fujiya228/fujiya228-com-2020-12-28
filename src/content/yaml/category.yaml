@@ -1,3 +1,6 @@
 - id: Python
-  description: Create an application using python.
+  description: Articles about Python.
   image: ../img/taxonomy/python.png
+- id: JavaScript
+  description: Articles about JavaScript.
+  image: ../img/taxonomy/javascript.png
