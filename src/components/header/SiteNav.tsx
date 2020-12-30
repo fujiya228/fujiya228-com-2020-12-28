@@ -9,6 +9,7 @@ import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
 import { Twitter } from '../icons/twitter';
+import { Contact } from '../icons/contact';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -118,6 +119,9 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 <Twitter />
               </a>
             )}
+            <Link to="/contact" css={SocialLink}>
+              <Contact />
+            </Link>
           </SocialLinks>
         </SiteNavRight>
       </nav>
