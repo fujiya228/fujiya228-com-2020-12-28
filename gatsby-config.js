@@ -61,7 +61,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-casper.netlify.com',
+        siteUrl: 'https://fujiya228.com',
       },
     },
     'gatsby-plugin-typescript',
