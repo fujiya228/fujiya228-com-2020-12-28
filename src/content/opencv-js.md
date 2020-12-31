@@ -4,7 +4,7 @@ title: 'OpenCV.jsを使ってみる'
 author: [Fujiya]
 tags: ['OpenCV','OpenCV.js']
 category: JavaScript
-image: 'img/taxonomy/vuejs.png'
+image: 'img/taxonomy/javascript.png'
 date: '2020-06-18T05:14:33.126Z'
 draft: false
 excerpt: JavaScript Article
