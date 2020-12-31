@@ -2,7 +2,7 @@
 layout: post
 title: 'v-on システム修飾子キーの使い方-Vue.js'
 author: [Fujiya]
-tags: ['v-on','修飾子','キー修飾子']
+tags: ['v-on','修飾子','システム修飾子キー']
 category: Vuejs
 image: 'img/taxonomy/vuejs.png'
 date: '2020-05-09T05:14:22.126Z'
