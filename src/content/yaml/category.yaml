@@ -7,3 +7,6 @@
 - id: Vuejs
   description: Articles about Vue.js.
   image: ../img/taxonomy/vuejs.png
+- id: Firebase
+  description: Articles about Firebase.
+  image: ../img/taxonomy/firebase.png
