@@ -3,7 +3,7 @@ layout: post
 title: 'v-forの使い方-Vue.js'
 author: [Fujiya]
 tags: ['v-for']
-category: Vue.js
+category: Vuejs
 image: 'img/taxonomy/vuejs.png'
 date: '2019-11-12T05:13:22.126Z'
 draft: false

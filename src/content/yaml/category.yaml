@@ -4,6 +4,6 @@
 - id: JavaScript
   description: Articles about JavaScript.
   image: ../img/taxonomy/javascript.png
-- id: Vue.js
+- id: Vuejs
   description: Articles about Vue.js.
   image: ../img/taxonomy/vuejs.png
