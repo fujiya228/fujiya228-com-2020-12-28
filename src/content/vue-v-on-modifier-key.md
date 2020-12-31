@@ -107,14 +107,14 @@ press
 ### エイリアスで指定
 `Vue.js`では一般的に使用されるキーコードのエイリアスを提供しています。
 
-|       修飾子      |                           内容                          |
-|:-----------------:|:-------------------------------------------------------:|
-|       shift       | Shiftキー                                               |
-|   ctrl(control)   | Ctrlキー                                                |
-|        alt        | Altキー                                                 |
-|        meta       | Macintosh コマンドキー（⌘） windows ウィンドウキー（⊞） |
-| left,right,middle |                   マウスボタンの修飾子                  |
-|       exact       |                  修飾子のパターンを制限                 |
+|     エイリアス     |                内容                |
+|:------------------:|:----------------------------------:|
+|        enter       | Enterキー（Returnキー）            |
+|         tab        | Tabキー                            |
+|       delete       | Delete キーと Backspace キーの両方 |
+|         esc        | Escキー                            |
+|        space       | スペースバー                       |
+| up,down,left,right |              方向キー              |
 
 ### ケバブケースで指定
 `Vue.js`では[KeyboardEvent.key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values)で公開されているものケバブケースで指定することができます。
