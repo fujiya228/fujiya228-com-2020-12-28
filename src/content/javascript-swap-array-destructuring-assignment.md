@@ -7,7 +7,7 @@ category: JavaScript
 image: 'img/taxonomy/javascript.png'
 date: '2020-12-31T05:13:22.126Z'
 draft: false
-excerpt: 
+excerpt: JavaScript Article
 ---
 
 ここでは、JavaScriptの分割代入を用いて配列の要素を入れ替える方法をサンプルコードを参考に解説していきます。

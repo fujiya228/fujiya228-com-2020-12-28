@@ -7,7 +7,7 @@ category: Vuejs
 image: 'img/taxonomy/vuejs.png'
 date: '2019-11-12T05:13:22.126Z'
 draft: false
-excerpt: 
+excerpt: Vue.js Article
 ---
 
 ここでは、`v-for`ディレクティブの基本的な使い方をサンプルコードを参考に解説していきます。

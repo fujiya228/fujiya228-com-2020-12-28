@@ -7,7 +7,7 @@ category: JavaScript
 image: 'img/taxonomy/javascript.png'
 date: '2019-05-01T05:13:22.126Z'
 draft: false
-excerpt: 
+excerpt: JavaScript Article
 ---
 
 ここでは、JavaScript(jQuery)を用いて目次を自動挿入する方法をサンプルコードを参考に解説していきます。
