@@ -20,6 +20,7 @@ import {
 } from '../styles/shared';
 import config from '../website-config';
 import { PageContext } from './post';
+import { Adsense } from '../components/Adsense';
 
 export interface IndexProps {
   pageContext: {
@@ -115,6 +116,7 @@ const IndexPage: React.FC<IndexProps> = props => {
           />
         )}
         <Footer />
+        <Adsense />
       </Wrapper>
     </IndexLayout>
   );
