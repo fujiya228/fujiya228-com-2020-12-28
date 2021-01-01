@@ -20,6 +20,7 @@ import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
 import TableOfContents from '../components/TableOfContents';
+import { Adsense } from '../components/Adsense';
 
 export interface Author {
   id: string;
@@ -242,6 +243,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
           pageContext={pageContext}
         />
 
+        <Adsense />
         <Footer />
       </Wrapper>
     </IndexLayout>

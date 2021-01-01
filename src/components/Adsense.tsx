@@ -7,21 +7,31 @@ declare global {
   }
 }
 
-export const Adsense: React.FC = () => {
+export interface AdsenseProps {
+  isInfead?: boolean;
+}
+
+export const Adsense: React.FC<AdsenseProps> = props => {
   useEffect(() => {
     if (window) {
-      // window.adsbygoogle = window.adsbygoogle || [];
-      // window.adsbygoogle.push({});
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
   });
+  const client = 'ca-pub-5351220307196429';
+  const format = 'fluid';
+
+  const layout = props.isInfead ? null : 'in-article';
+  const layoutKey = props.isInfead ? '-6t+ed+2i-1n-4w' : null;
+  const slot = props.isInfead ? '5405028860' : '1004093357';
 
   return (
     <Ins
-      className="adsbygoogle" data-ad-layout="in-article"
-      data-ad-format="fluid"
-      data-ad-client="ca-pub-5351220307196429"
-      data-ad-slot="1004093357"
+      className="adsbygoogle"
+      data-ad-client={client}
+      data-ad-layout={layout}
+      data-ad-layout-key={layoutKey}
+      data-ad-format={format}
+      data-ad-slot={slot}
     />
   );
 };
