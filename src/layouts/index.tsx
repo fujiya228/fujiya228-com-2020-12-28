@@ -17,6 +17,11 @@ const IndexLayout: React.FC<IndexProps> = props => {
     <div className={props.className}>
       <Helmet>
         <link rel="icon" href={favicon} type="image/x-icon" />
+        <link
+          key="dns-prefetch-google-analytics"
+          rel="dns-prefetch"
+          href="https://www.google-analytics.com"
+        />,
       </Helmet>
       <Global
         styles={css`
