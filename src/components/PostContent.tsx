@@ -60,12 +60,7 @@ export const PostFullContent = styled.section`
     padding-top: 0;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
+  
   p,
   ul,
   ol,
@@ -74,7 +69,9 @@ export const PostFullContent = styled.section`
   blockquote,
   .post-full-comments,
   .footnotes {
-    margin: 0 0 1.5em 0;
+    font-size: 18px;
+    line-height: 1.6em;
+    margin-bottom: 24px;
     min-width: 100%;
   }
   @media (max-width: 500px) {
@@ -157,8 +154,9 @@ export const PostFullContent = styled.section`
 
   blockquote {
     margin: 0 0 1.5em;
-    padding: 0 1.5em;
+    padding: 1em 1.5em;
     border-left: #3eb0ef 3px solid;
+    background-color: #eee;
   }
   @media (max-width: 500px) {
     blockquote {
@@ -179,13 +177,16 @@ export const PostFullContent = styled.section`
   }
 
   code {
-    padding: 0 5px 2px;
-    font-size: 0.8em;
-    line-height: 1em;
-    font-weight: 400 !important;
+    margin: 0 4px;
+    padding: 0 6px;
+    font-size: 0.85em;
+    font-family: Consolas, "Courier New", monospace;
+    color: #2280e2;
     /* background: var(--whitegrey); */
-    background: ${colors.whitegrey};
+    /* background: ${colors.whitegrey}; */
+    background: #d4d4d4;
     border-radius: 3px;
+    display: inline-block;
   }
 
   p code {
@@ -267,69 +268,51 @@ export const PostFullContent = styled.section`
   h1 {
     margin: 0.5em 0 0.4em;
     font-size: 4.2rem;
-    line-height: 1.25em;
+    line-height: 1.4em;
     font-weight: 600;
-  }
-  p + h1 {
-    margin-top: 0.8em;
+    border-bottom: solid 10px ${colors.base};
   }
   @media (max-width: 800px) {
     h1 {
       font-size: 3.2rem;
-      line-height: 1.25em;
     }
   }
 
   h2 {
-    margin: 0.5em 0 0.4em;
+    margin: 0 0 24px;
     font-size: 3.2rem;
-    line-height: 1.25em;
+    line-height: 1.4em;
     font-weight: 600;
-  }
-  p + h2 {
-    margin-top: 0.8em;
+    border-bottom: solid 3px ${colors.base};
   }
   @media (max-width: 800px) {
     h2 {
       margin-bottom: 0.3em;
       font-size: 2.8rem;
-      line-height: 1.25em;
     }
   }
 
   h3 {
-    margin: 0.5em 0 0.2em;
     font-size: 2.5rem;
-    line-height: 1.3em;
+    line-height: 1.4em;
     font-weight: 600;
-  }
-  h2 + h3 {
-    margin-top: 0.7em;
   }
   @media (max-width: 800px) {
     h3 {
       margin-bottom: 0.3em;
       font-size: 2.4rem;
-      line-height: 1.3em;
     }
   }
 
   h4 {
-    margin: 0.5em 0 0.2em;
     font-size: 2.5rem;
     font-weight: 600;
-  }
-  h2 + h4 {
-    margin-top: 0.7em;
-  }
-  h3 + h4 {
-    margin-top: 0;
+    line-height: 1.4em;
   }
   @media (max-width: 800px) {
     h4 {
       margin-bottom: 0.3em;
       font-size: 2.4rem;
-      line-height: 1.3em;
     }
   }
 
@@ -362,15 +345,19 @@ export const PostFullContent = styled.section`
   }
 
   h6 {
-    margin: 0.5em 0 0.2em 0;
     font-size: 2rem;
     font-weight: 700;
+    line-height: 1.4em;
   }
   @media (max-width: 800px) {
     h6 {
       font-size: 1.8rem;
-      line-height: 1.4em;
     }
+  }
+
+  h3,h4,h6 {
+    margin: 0 0 24px;
+    border-bottom: double 8px ${colors.base};
   }
 
   table {
@@ -577,11 +564,8 @@ export const PostFullContent = styled.section`
 
   /* Inline code */
   *:not(pre) > code[class*='language-'] {
-    border-radius: 0.3em;
-    background: rgb(1, 22, 39);
-    color: white;
-    padding: 0.15em 0.5em;
-    white-space: normal;
+    color: #2280e2;
+    background: #d4d4d4;
   }
 
   .token.comment,
@@ -704,6 +688,7 @@ export const PostFullContent = styled.section`
     background: #777;
     padding: 0 16px;
     font-size: 14px;
+    z-index: 10;
   }
 `;
 
