@@ -15,6 +15,8 @@ interface IndexProps {
   className?: string;
   postData?: {
     title: string;
+    slug: string;
+    category: string;
     date: string;
     image: string;
   };
