@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Global, css } from '@emotion/react';
@@ -8,8 +9,15 @@ import { lighten } from 'polished';
 import favicon from '../../src/favicon.ico';
 import { colors } from '../styles/colors';
 
+import { Jsonld } from '../components/JSONLD';
+
 interface IndexProps {
   className?: string;
+  postData?: {
+    title: string;
+    date: string;
+    image: string;
+  };
 }
 
 const IndexLayout: React.FC<IndexProps> = props => {
@@ -21,8 +29,9 @@ const IndexLayout: React.FC<IndexProps> = props => {
           key="dns-prefetch-google-analytics"
           rel="dns-prefetch"
           href="https://www.google-analytics.com"
-        />,
+        />
       </Helmet>
+      <Jsonld postData={props.postData} />
       <Global
         styles={css`
           html,

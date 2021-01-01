@@ -49,6 +49,7 @@ interface PageTemplateProps {
         title: string;
         date: string;
         userDate: string;
+        category: string;
         image: {
           childImageSharp: {
             fluid: any;
@@ -117,8 +118,16 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   // 20 AUG 2018
   const displayDatetime = format(date, 'dd LLL yyyy');
 
+  const postData = {
+    title: post.frontmatter.title,
+    slug: location.pathname,
+    category: post.frontmatter.category,
+    date: post.frontmatter.date,
+    image: post.frontmatter.image.childImageSharp.fluid.src,
+  };
+
   return (
-    <IndexLayout className="post-template">
+    <IndexLayout className="post-template" postData={postData}>
       <Helmet>
         <html lang={config.lang} />
         <title>{post.frontmatter.title}</title>
