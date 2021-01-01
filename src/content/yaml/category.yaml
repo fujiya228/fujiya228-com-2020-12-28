@@ -1,12 +1,12 @@
 - id: Python
   description: Articles about Python.
-  image: ../img/taxonomy/python.png
+  image: ../img/taxonomy/python-category.png
 - id: JavaScript
   description: Articles about JavaScript.
-  image: ../img/taxonomy/javascript.png
+  image: ../img/taxonomy/javascript-category.png
 - id: Vuejs
   description: Articles about Vue.js.
-  image: ../img/taxonomy/vuejs.png
+  image: ../img/taxonomy/vuejs-category.png
 - id: Firebase
   description: Articles about Firebase.
-  image: ../img/taxonomy/firebase.png
+  image: ../img/taxonomy/firebase-category.png
