@@ -28,6 +28,7 @@ export const Adsense: React.FC<AdsenseProps> = props => {
   return (
     <Ins
       className="adsbygoogle"
+      css={style}
       data-ad-client={client}
       data-ad-layout={layout}
       data-ad-layout-key={layoutKey}
