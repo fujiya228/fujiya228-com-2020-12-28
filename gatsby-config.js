@@ -102,5 +102,11 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-adsense',
+      options: {
+        publisherId: 'ca-pub-5351220307196429',
+      },
+    },
   ],
 };
