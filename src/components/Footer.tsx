@@ -32,7 +32,11 @@ export const Footer: React.FC = () => {
               Twitter
             </a>
           )}
-
+          {config.github && (
+            <a href={config.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          )}
         </SiteFooterNav>
       </div>
     </footer>

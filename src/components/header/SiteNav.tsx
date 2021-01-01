@@ -9,6 +9,7 @@ import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
 import { Twitter } from '../icons/twitter';
+import { GitHub } from '../icons/github';
 import { Contact } from '../icons/contact';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
@@ -118,6 +119,17 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 rel="noopener noreferrer"
               >
                 <Twitter />
+              </a>
+            )}
+            {config.github && (
+              <a
+                css={SocialLink}
+                href={config.github}
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHub />
               </a>
             )}
             <Link to="/contact" css={SocialLink}>

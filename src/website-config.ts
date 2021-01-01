@@ -19,6 +19,7 @@ export interface WebsiteConfig {
    * full url, no username
    */
   twitter?: string;
+  github?: string;
   /**
    * Meta tag for Google Webmaster Tools
    */
@@ -40,6 +41,7 @@ const config: WebsiteConfig = {
   siteUrl: 'https://fujiya228.com',
   facebook: 'https://www.facebook.com/Fujiya0xE2',
   twitter: 'https://twitter.com/Fujiya0xE2',
+  github: 'https://github.com/fujiya228',
   googleSiteVerification: 'GoogleCode',
   footer: 'is based on Gatsby',
   organization: 'Fujiya',
