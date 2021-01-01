@@ -7,7 +7,6 @@ import { inner, outer } from '../styles/shared';
 import { PageContext } from '../templates/post';
 import { PostCard } from './PostCard';
 import { ReadNextCard } from './ReadNextCard';
-import { Adsense } from '../components/Adsense';
 
 interface ReadNextProps {
   tags: string[];
@@ -50,8 +49,6 @@ export const ReadNext = ({ relatedPosts, currentPageSlug, tags, pageContext }: R
 
           {pageContext.prev && <PostCard post={pageContext.prev} />}
           {pageContext.next && <PostCard post={pageContext.next} />}
-          <Adsense isInfead />
-          <Adsense isInfead />
         </ReadNextFeed>
       </div>
     </ReadNextAside>

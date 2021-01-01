@@ -235,6 +235,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </article>
           </div>
         </main>
+        <Adsense />
 
         <ReadNext
           currentPageSlug={location.pathname}
