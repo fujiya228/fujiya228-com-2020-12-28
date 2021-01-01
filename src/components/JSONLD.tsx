@@ -189,6 +189,12 @@ export const Jsonld = (props: JSONLDProps) => (
             '@type': 'ImageObject',
             url: postData.image,
           },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': config.siteUrl,
+          },
+          author,
+          publisher,
         });
       }
 
