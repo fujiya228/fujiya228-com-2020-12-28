@@ -23,6 +23,7 @@ export const Adsense: React.FC<AdsenseProps> = props => {
   const layout = props.isInfead ? null : 'in-article';
   const layoutKey = props.isInfead ? '-6t+ed+2i-1n-4w' : null;
   const slot = props.isInfead ? '5405028860' : '1004093357';
+  const style = props.isInfead ? 'min-width: 250px' : null;
 
   return (
     <Ins
