@@ -147,9 +147,14 @@ const PostCardImage = styled.div`
   height: 200px;
   background: ${colors.lightgrey} no-repeat center center;
   background-size: cover;
+  transition: all 0.35s ease-in-out;
 
   @media (prefers-color-scheme: dark) {
     background: ${colors.darkmode};
+  }
+
+  &:hover{
+    opacity: 0.6;
   }
 `;
 
@@ -184,8 +189,11 @@ const PostCardPrimaryTag = styled.div`
 const PostCardTitle = styled.h2`
   margin: 0 0 0.4em;
   line-height: 1.15em;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.35s ease-in-out;
   color: ${colors.link};
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media (prefers-color-scheme: dark) {
     color: rgba(255, 255, 255, 0.85);
@@ -240,11 +248,6 @@ const PostCardBylineContent = styled.div`
 const PostCardHeader = styled.header`
   margin: 15px 0 0;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-
-  a:hover {
-    text-decoration: none;
-    opacity: 1;
-  }
 
   h2:before {
     content: '';
