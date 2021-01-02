@@ -95,11 +95,11 @@ export const PostFullContent = styled.section`
   }
 
   a {
-    /* color: var(--darkgrey); */
-    color: ${colors.darkgrey};
+    /* color: var(--blue); */
+    color: ${colors.blue};
     word-break: break-word;
-    /* box-shadow: var(--darkgrey) 0 -1px 0 inset; */
-    box-shadow: ${colors.darkgrey} 0 -1px 0 inset;
+    /* box-shadow: var(--blue) 0 -1px 0 inset; */
+    box-shadow: ${colors.blue} 0 -1px 0 inset;
     transition: all 0.2s ease-in-out;
   }
 
@@ -108,7 +108,7 @@ export const PostFullContent = styled.section`
     color: ${colors.blue};
     text-decoration: none;
     /* box-shadow: var(--blue) 0 -1px 0 inset; */
-    box-shadow: ${colors.blue} 0 -1px 0 inset;
+    box-shadow: none;
   }
 
   strong,
@@ -211,7 +211,7 @@ export const PostFullContent = styled.section`
 
   pre ::selection {
     /* color: color(var(--midgrey) l(-25%)); */
-    color: ${lighten('-0.25', colors.midgrey)};
+    color: #000;
   }
 
   pre code {
@@ -537,29 +537,6 @@ export const PostFullContent = styled.section`
   pre[class*='language-'] {
     overflow: auto;
     padding: 48px 20px 20px;
-  }
-
-  pre[class*='language-']::-moz-selection {
-    /* Firefox */
-    background: hsl(207, 4%, 16%);
-  }
-
-  pre[class*='language-']::selection {
-    /* Safari */
-    background: hsl(207, 4%, 16%);
-  }
-
-  /* Text Selection colour */
-  pre[class*='language-']::-moz-selection,
-  pre[class*='language-'] ::-moz-selection {
-    text-shadow: none;
-    background: hsla(0, 0%, 100%, 0.15);
-  }
-
-  pre[class*='language-']::selection,
-  pre[class*='language-'] ::selection {
-    text-shadow: none;
-    background: hsla(0, 0%, 100%, 0.15);
   }
 
   /* Inline code */
