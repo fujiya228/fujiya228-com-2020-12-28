@@ -110,6 +110,11 @@ const TableOfContentsFAB = styled.div`
   transition: .2s ease-in-out;
   z-index: 1000;
 
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
   .icon {
     display: block;
     position: relative;
