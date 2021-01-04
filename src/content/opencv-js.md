@@ -46,9 +46,16 @@ OpenCVがJavaScriptでも使えるということで使ってみました。
 
 - 必要なものをインストール
 - GitHubからソースコードのの入手
-  `git clone https://github.com/opencv/opencv.git`
+
+```bash:title=bash
+git clone https://github.com/opencv/opencv.git
+```
+
 - ソースからOpenCV.jsをビルドする
-  `python ./platforms/js/build_js.py ＜出力先のディレクトリ＞`
+
+```bash:title=bash
+python ./platforms/js/build_js.py ＜出力先のディレクトリ＞
+```
 
 ## 公式のドキュメントからコピーを取得
 [ビルドの手順を示したページ](https://docs.opencv.org/3.4/d4/da1/tutorial_js_setup.html)の最初にも書かれていましたが、使用するだけならばOpencv.jsの使用チュートリアルから、ビルド済みコピーを取得することができます。
@@ -405,4 +412,4 @@ function faceDetection() {
 
 今回は[公式のチュートリアル](https://docs.opencv.org/master/d2/d99/tutorial_js_face_detection.html)で使われていたものと同じものを使っています。
 
-[モデル（haarcascade_frontalface_default.xml）](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml)
+[モデル（haarcascade\_frontalface\_default.xml）](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml)
