@@ -261,7 +261,7 @@ export const PostFullContent = styled.section`
     /* color: color(var(--darkgrey) l(-5%)); */
     color: ${lighten('-0.05', colors.darkgrey)};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+      'Open Sans', 'Helvetica Neue', '游ゴシック', 'Yu Gothic', sans-serif;
     padding-top: 72px;
   }
 
@@ -369,7 +369,7 @@ export const PostFullContent = styled.section`
     border-spacing: 0;
     border-collapse: collapse;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+      'Open Sans', 'Helvetica Neue', '游ゴシック', 'Yu Gothic', sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;
