@@ -34,7 +34,7 @@ class TableOfContents extends React.Component<TableOfContentsProps, TableOfConte
           {this.props.headings?.map(heading => {
             return (
               <TableOfContentsLinkBox key={heading.id} className={`depth-${heading.depth}`}>
-                <Link to={'#' + heading.id}>{heading.value}</Link>
+                <a href={'#' + heading.id}>{heading.value}</a>
               </TableOfContentsLinkBox>
             );
           })}
