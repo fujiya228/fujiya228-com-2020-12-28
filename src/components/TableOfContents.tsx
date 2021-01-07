@@ -3,7 +3,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { colors } from '../styles/colors';
-import { Link } from 'gatsby';
 
 interface TableOfContentsProps {
   isHome?: boolean;
@@ -26,6 +25,15 @@ class TableOfContents extends React.Component<TableOfContentsProps, TableOfConte
     this.setState({ isOpen: !flag });
   }
 
+  scroll(id: string): any {
+    const top = document.getElementById(id)?.getBoundingClientRect().top ?? 0;
+    const offset = window.pageYOffset;
+    window.scrollTo({
+      top: top + offset,
+      behavior: 'smooth',
+    });
+  }
+
   render() {
     return (
       <nav>
@@ -33,8 +41,8 @@ class TableOfContents extends React.Component<TableOfContentsProps, TableOfConte
         <TableOfContentsMain className={this.state.isOpen ? 'open' : ''}>
           {this.props.headings?.map(heading => {
             return (
-              <TableOfContentsLinkBox key={heading.id} className={`depth-${heading.depth}`}>
-                <a href={'#' + heading.id}>{heading.value}</a>
+              <TableOfContentsLinkBox key={heading.id} className={`depth-${heading.depth}`} onClick={() => this.scroll(heading.id)}>
+                <a>{heading.value}</a>
               </TableOfContentsLinkBox>
             );
           })}
@@ -130,6 +138,7 @@ const TableOfContentsLinkBox = styled.div`
   :hover {
     color: #fff;
     background: #f1f3f4;
+    cursor: pointer;
   }
 `;
 
