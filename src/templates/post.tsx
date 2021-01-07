@@ -45,7 +45,11 @@ interface PageTemplateProps {
       htmlAst: any;
       excerpt: string;
       timeToRead: string;
-      tableOfContents: string;
+      headings: Array<{
+        id: string;
+        depth: number;
+        value: string;
+      }>;
       frontmatter: {
         title: string;
         date: string;
@@ -191,7 +195,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </div>
           </div>
         </header>
-        <TableOfContents tableOfContents={post.tableOfContents} />
+        <TableOfContents headings={post.headings} />
         <main id="site-main" className="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             {/* TODO: no-image css tag? */}
@@ -427,7 +431,11 @@ export const query = graphql`
       htmlAst
       excerpt
       timeToRead
-      tableOfContents(absolute: false)
+      headings {
+        depth
+        id
+        value
+      }
       frontmatter {
         title
         userDate: date(formatString: "D MMMM YYYY")

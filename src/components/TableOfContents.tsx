@@ -3,11 +3,16 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { colors } from '../styles/colors';
+import { Link } from 'gatsby';
 
 interface TableOfContentsProps {
   isHome?: boolean;
   isPost?: boolean;
-  tableOfContents?: string;
+  headings?: Array<{
+    id: string;
+    depth: number;
+    value: string;
+  }>;
 }
 
 interface TableOfContentsState {
@@ -25,7 +30,15 @@ class TableOfContents extends React.Component<TableOfContentsProps, TableOfConte
     return (
       <nav>
         <TableOfContentsOverlay className={this.state.isOpen ? 'open' : ''} onClick={() => this.switchState(this.state.isOpen)} />
-        <TableOfContentsMain dangerouslySetInnerHTML={{ __html: this.props.tableOfContents ?? '' }} className={this.state.isOpen ? 'open' : ''} />
+        <TableOfContentsMain className={this.state.isOpen ? 'open' : ''}>
+          {this.props.headings?.map(heading => {
+            return (
+              <TableOfContentsLinkBox key={heading.id} className={`depth-${heading.depth}`}>
+                <Link to={'#' + heading.id}>{heading.value}</Link>
+              </TableOfContentsLinkBox>
+            );
+          })}
+        </TableOfContentsMain>
         <TableOfContentsFAB className={this.state.isOpen ? 'open' : ''} onClick={() => this.switchState(this.state.isOpen)}>
           <i className="icon" />
           <i className="icon" />
@@ -44,8 +57,10 @@ const TableOfContentsMain = styled.div`
   width: 80%;
   max-width: 330px;
   height: calc(100% - 64px);
-  padding: 8px;
-  background: ${colors.base};
+  /* padding: 8px; */
+  padding: 8px 8px 8px 0;
+  /* background: ${colors.base}; */
+  background: #fff;
   font-size: 16px;
   transition: .2s ease-in-out;
   -webkit-transform: translateX(-100%);
@@ -86,15 +101,36 @@ const TableOfContentsMain = styled.div`
     display: block;
     padding: 2px;
     text-decoration: none;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    color: ${colors.base};
   }
 
   > ul {
     padding: 0;
   }
 
+`;
+
+const TableOfContentsLinkBox = styled.div`
+  border-radius: 0 16px 16px 0;
+  &.depth-2 a {
+    padding-left: 1em;
+  }
+  &.depth-3 a {
+    padding-left: 2em;
+  }
+  &.depth-4 a {
+    padding-left: 3em;
+  }
+  &.depth-5 a {
+    padding-left: 4em;
+  }
+  &.depth-6 a {
+    padding-left: 5em;
+  }
+  :hover {
+    color: #fff;
+    background: #f1f3f4;
+  }
 `;
 
 const TableOfContentsFAB = styled.div`
