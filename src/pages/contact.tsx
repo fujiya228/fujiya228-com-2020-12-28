@@ -63,13 +63,13 @@ const Contact: React.FC = () => (
                     <input type="hidden" name="bot-field" />
                   </p>
                   <p>
-                    <label>お名前 (必須)<br /><input className="contact" type="text" name="name" /></label>
+                    <label>お名前 (必須)<br /><input required className="contact" type="text" name="name" /></label>
                   </p>
                   <p>
-                    <label>メールアドレス (必須)<br /><input className="contact" type="email" name="email" /></label>
+                    <label>メールアドレス (必須)<br /><input required className="contact" type="email" name="email" /></label>
                   </p>
                   <p>
-                    <label>メッセージ本文<br /><textarea className="contact" name="message" /></label>
+                    <label>メッセージ本文（必須）<br /><textarea required className="contact" name="message" /></label>
                   </p>
                   <p>
                     <button className="contact" type="submit">送信</button>
