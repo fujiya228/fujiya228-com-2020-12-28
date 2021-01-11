@@ -14,8 +14,7 @@ export interface AdsenseProps {
 export const Adsense: React.FC<AdsenseProps> = props => {
   useEffect(() => {
     if (window) {
-      window.adsbygoogle = [];
-      window.adsbygoogle.push({});
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
   });
   const client = 'ca-pub-5351220307196429';

@@ -27,11 +27,19 @@ export const SiteNavLogo = () => (
       }
     `}
     render={(data: SiteNavLogoProps) => (
-      <Link className="site-nav-logo" css={SiteNavLogoStyles} to="/">
+      // TODO: locationがPropsからとってこれなかった
+      window.location.pathname === '/' ? (
+        <div className="site-nav-logo" css={SiteNavLogoStyles}>
+          {data.logo ? (
+            <img src={data.logo.childImageSharp.fixed.src} alt={config.title} />
+          ) : (config.title)}
+        </div>
+      ) : (<Link className="site-nav-logo" css={SiteNavLogoStyles} to="/">
         {data.logo ? (
           <img src={data.logo.childImageSharp.fixed.src} alt={config.title} />
         ) : (config.title)}
-      </Link>
+        {/* eslint-disable-next-line react/jsx-closing-tag-location */}
+      </Link>)
     )}
   />
 );
