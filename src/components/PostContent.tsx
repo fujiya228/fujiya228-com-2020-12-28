@@ -636,8 +636,6 @@ export const PostFullContent = styled.section`
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    margin-left: -1.3125rem;
-    margin-right: -1.3125rem;
     border-radius: 10px;
     background: #011627;
     -webkit-overflow-scrolling: touch;
@@ -664,6 +662,7 @@ export const PostFullContent = styled.section`
     color: #eee;
     background: #777;
     padding: 0 16px;
+    margin-left: 20px;
     font-size: 14px;
     z-index: 10;
   }
