@@ -11,6 +11,7 @@ interface SiteNavLogoProps {
       fixed: FixedObject;
     };
   };
+  location: Location;
 }
 
 export const SiteNavLogo = () => (
@@ -27,8 +28,7 @@ export const SiteNavLogo = () => (
       }
     `}
     render={(data: SiteNavLogoProps) => (
-      // TODO: locationがPropsからとってこれなかった
-      window.location.pathname === '/' ? (
+      location.pathname === '/' ? (
         <div className="site-nav-logo" css={SiteNavLogoStyles}>
           {data.logo ? (
             <img src={data.logo.childImageSharp.fixed.src} alt={config.title} />
