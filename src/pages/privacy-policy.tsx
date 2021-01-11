@@ -67,7 +67,7 @@ const About: React.FC = () => (
                   <p>当サイトでは、訪問者が当サイトにコメントを残した際に、以下の個人情報を取得します。</p>
                   <ul><li>コメントフォームに表示されている名前</li><li>コメントフォームに表示されているメールアドレス</li><li>コメントフォームに表示されているコメント内容</li><li>コメントフォームに表示されているサイト名（任意項目）</li><li>IPアドレス</li><li>ブラウザユーザーエージェント文字列</li></ul>
                   <p>これにより次回コメントを残す際に、「名前」や「メールアドレス」が自動的に表示されるため、それらを再入力する手間を省くことができます。</p>
-                  <p>メールアドレスから作成される匿名化された (「ハッシュ」とも呼ばれる) 文字列は、訪問者が&nbsp;<a href="https://ja.gravatar.com/" target="_blank" rel="noreferrer noopener">Gravatar&nbsp;</a>サービスを使用中かどうか確認するため同サービスに提供されることがあります。同サービスのプライバシーポリシーを確認する場合は、<a href="https://automattic.com/privacy/" target="_blank" rel="noreferrer noopener">こちらをクリック</a>してください。</p>
+                  <p>メールアドレスから作成される匿名化された (「ハッシュ」とも呼ばれる) 文字列は、訪問者が&nbsp;<a href="https://ja.gravatar.com/" target="_blank" rel="noreferrer noopener">Gravatar&nbsp;</a>サービスを使用中かどうか確認するため同サービスに提供されることがあります。同サービスのプライバシーポリシーを確認する場合は、<a href="https://automattic.com/privacy/" target="_blank" rel="noreferrer noopener">ここをクリック</a>してください。</p>
                   <h4><strong>3-1-1．利用目的について</strong></h4>
                   <p>荒らし対策やスパム検出に役立てるためと、訪問者の利便性のためです。また、当サイト内で「訪問者からこのようなコメントがありました」と紹介させていただく場合もあります。</p>
                   <p>コメントが当サイトの管理人であるFujiya（以下、「管理人」とします。）に承認されると、プロフィール画像がコメントとともに一般公開されます。</p>
@@ -77,7 +77,7 @@ const About: React.FC = () => (
                   <p>訪問者が当サイトにコメントを残したことがある場合は、当サイトの管理人は、当サイトが保存する訪問者についての個人情報（提供したすべての情報を含む）をエクスポートファイルとして訪問者が「受け取りたい」というリクエストに応えることが出来ます。その際、訪問者のメールアドレスに確認のメールが送られます。</p>
                   <p>また、訪問者から訪問者本人の個人情報を「消去してほしい」というリクエストにも応えることが出来ます。これには、管理や法律、セキュリティ目的のために保持する義務がある情報は含まれません。また消去する際も、訪問者のメールアドレスに確認のメールが送られます。</p>
                   <h3><strong>3-2．お問い合わせされた個人情報を取得します</strong></h3>
-                  <p>当サイトではお問い合わせフォーム <a href="https://fujiya228.com/contact-form">https://fujiya228.com/contact-form</a>&nbsp;を設けています。</p>
+                  <p>当サイトではお問い合わせフォーム <a href="https://fujiya228.com/contact/">https://fujiya228.com/contact/</a>&nbsp;を設けています。</p>
                   <p>訪問者がそのお問い合わせフォームから問い合わせをされた際に入力された、以下の個人情報を取得します。</p>
                   <ul><li>お問い合わせフォームに入力された名前</li><li>お問い合わせフォームに入力されたメールアドレス</li><li>お問い合わせフォームに入力されたお問合せ内容</li></ul>
                   <h4><strong>3-2-1．利用目的について</strong></h4>
@@ -133,12 +133,12 @@ const About: React.FC = () => (
                   <h2>9．第三者配信の広告サービスについて</h2>
                   <p>当サイトは、第三者配信の広告サービス「Google Adsense（グーグルアドセンス）」を利用しています。</p>
                   <p>Googleなどの第三者広告配信事業者は、訪問者の興味に応じた広告を表示するために、Cookie（当サイトの訪問者が当サイトや他のサイトにアクセスした際の情報など）を使用することがあります。</p>
-                  <p>訪問者は、広告設定で訪問者に合わせた広告（以下、「パーソナライズド広告」とします。）を無効にすることが出来ます。その設定をする場合は、<a href="https://www.google.com/settings/ads" target="_blank" rel="noreferrer noopener">こちらをクリック</a>してください。また、<a href="http://www.aboutads.info/choices/" target="_blank" rel="noreferrer noopener">www.aboutads.info</a>&nbsp;にアクセスすれば、パーソナライズド広告に使われる第三者配信事業者の Cookie を無効にできます。</p>
+                  <p>訪問者は、広告設定で訪問者に合わせた広告（以下、「パーソナライズド広告」とします。）を無効にすることが出来ます。その設定をする場合は、<a href="https://www.google.com/settings/ads" target="_blank" rel="noreferrer noopener">ここをクリック</a>してください。また、<a href="http://www.aboutads.info/choices/" target="_blank" rel="noreferrer noopener">www.aboutads.info</a>&nbsp;にアクセスすれば、パーソナライズド広告に使われる第三者配信事業者の Cookie を無効にできます。</p>
                   <p>第三者配信による広告掲載を無効にしていない場合は、第三者配信事業者や広告ネットワークの配信する広告がサイトに掲載されることがあります。</p>
                   <p>Googleによって広告の第三者配信が認められている広告配信事業者の詳細は、<a href="https://support.google.com/dfp_premium/answer/94149" target="_blank" rel="noreferrer noopener">ここをクリック</a>してください。</p>
                   <h2>10．プライバシーポリシーの変更について</h2>
                   <p>当サイトは、個人情報に関して適用される日本の法令を遵守するとともに、本プライバシーポリシーの内容を適宜見直しその改善に努めます。修正された最新のプライバシーポリシーは常に本ページにて開示されます。</p>
-                  <p><strong>2019年04月30日</strong> 策定<br /><strong>2019年04月30日</strong> 改訂</p>
+                  <p><strong>2019年04月30日</strong> 策定<br /><strong>2021年01月11日</strong> 改訂</p>
                 </article>
               </div>
             </PostFullContent>
