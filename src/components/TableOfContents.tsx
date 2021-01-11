@@ -26,6 +26,7 @@ class TableOfContents extends React.Component<TableOfContentsProps, TableOfConte
   }
 
   scroll(id: string): any {
+    this.setState({ isOpen: false });
     const top = document.getElementById(id)?.getBoundingClientRect().top ?? 0;
     const offset = window.pageYOffset;
     window.scrollTo({
