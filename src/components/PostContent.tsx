@@ -31,19 +31,15 @@ const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
 
 export const PostFullContent = styled.section`
   position: relative;
-  margin: 0 auto;
-  padding: 0 170px 6vw;
+  padding: 0 0 6vw;
   min-height: 230px;
   font-family: Georgia, serif;
   font-size: 2rem;
   line-height: 1.6em;
   background: #fff;
 
-  @media (max-width: 1170px) {
-    padding: 0 11vw;
-  }
-  @media (max-width: 800px) {
-    padding: 0 5vw;
+  @media (max-width: 840px) {
+    max-width: 100%;
     font-size: 1.8rem;
   }
   @media (max-width: 500px) {

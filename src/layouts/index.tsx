@@ -283,8 +283,6 @@ const IndexLayout: React.FC<IndexProps> = props => {
           }
 
           html {
-            overflow-x: hidden;
-            overflow-y: scroll;
             font-size: 62.5%;
 
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

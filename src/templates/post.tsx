@@ -21,6 +21,7 @@ import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
 import TableOfContents from '../components/TableOfContents';
 import { Adsense } from '../components/Adsense';
+import { PostAside } from '../components/PostAside';
 import { adsenseReplace } from '../utils/AdsenseReplace';
 
 export interface Author {
@@ -203,8 +204,8 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
           </div>
         </header>
         <TableOfContents headings={post.headings} />
-        <main id="site-main" className="site-main" css={[SiteMain, outer]}>
-          <div css={inner}>
+        <div css={[outer, PostMainColmun]}>
+          <main id="site-main" className="site-main" css={[SiteMain, inner]}>
             {/* TODO: no-image css tag? */}
             <article css={[PostFull, !post.frontmatter.image && NoImage]}>
               <PostFullHeader className="post-full-header">
@@ -244,8 +245,9 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
               </PostFullHeader>
               <PostContent htmlAst={post.htmlAst} />
             </article>
-          </div>
-        </main>
+          </main>
+          <PostAside pathname={pathname} />
+        </div>
 
         <ReadNext
           currentPageSlug={location.pathname}
@@ -261,11 +263,28 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   );
 };
 
+const PostMainColmun = css`
+  margin: 64px auto 0;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+
+  @media (min-width: 1170px) {
+    max-width: 1040px;
+    padding: 0;
+  }
+`;
+
 const PostTemplate = css`
   .site-main {
-    margin-top: 64px;
+    position: relative;
     background: #fff;
     padding-bottom: 4vw;
+    max-width: 70%;
+
+    @media (max-width: 840px) {
+      max-width: 100%;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -278,6 +297,7 @@ const PostTemplate = css`
 
 export const PostFull = css`
   position: relative;
+  width: 100%;
   z-index: 50;
 `;
 
@@ -294,18 +314,12 @@ export const NoImage = css`
 
 export const PostFullHeader = styled.header`
   position: relative;
-  margin: 0 auto;
-  padding: 70px 170px 50px;
+  padding: 70px 0 50px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
   @media (max-width: 1170px) {
-    padding: 60px 11vw 50px;
-  }
-
-  @media (max-width: 800px) {
-    padding-right: 5vw;
-    padding-left: 5vw;
+    padding: 60px 0 50px;
   }
 
   @media (max-width: 500px) {
