@@ -26,8 +26,8 @@ export const adsenseReplace = () => {
         element,
       );
       console.log('insert ads');
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
     });
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
 };
 
