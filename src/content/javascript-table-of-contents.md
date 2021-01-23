@@ -84,6 +84,7 @@ jQuery(document).ready(function (jQuery) {
 5. id=”TOC”のタグ内に出力
 
 2～3はタグがある限り繰り返し行います。
+<div class="ads"></div>
 
 ### mainタグ内のh1~h3タグの取得
 以下のコードが取得の部分になります。
@@ -181,6 +182,7 @@ while (current_level > 0) {
 //id="TOC"のタグの中に以下の目次タグと今まで格納してきたtocを出力
 jQuery("#TOC").html('<div>目次</div>' + toc); 
 ```
+<div class="ads"></div>
 
 ## 応用してみる
 上記ではh1~h3でしたが、拡張してh1~h6や特定のタグに絞ることもできます。また、ul,li,a要素にクラスを割り振ることでデザインを整えることもできます。

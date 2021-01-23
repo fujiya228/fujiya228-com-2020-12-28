@@ -42,6 +42,7 @@ python3 -m venv venv
 ```bash:title=bash
 source venv/bin/activate
 ```
+<div class="ads"></div>
 
 ## LINE Notifyの準備
 今回はLINE NotifyをPythonを使って利用します。
@@ -136,6 +137,7 @@ LINE Notifyに「test message」と表示されていたら成功です。
 ※Content-Typeは無くてもできましたが、いざ指定すると`application/x-www-form-urlencoded`の方しかできませんでした。
 
 とても扱いやすいライブラリです。詳しい使い方は公式の[クイックスタート](https://requests-docs-ja.readthedocs.io/en/latest/user/quickstart/)をご覧ください。
+<div class="ads"></div>
 
 ## 定期的に通知する
 今回は先ほどのコードをcronを用いて定期的に実行することで、通知を定期的に行います。
@@ -206,6 +208,7 @@ which python
 以下をを参考に解決してください。
 
 [macOS 10.15 catalina で crontab を使用する](https://mac-ra.com/catalina-crontab/)
+<div class="ads"></div>
 
 ## スタンプを通知に含める
 LINE Notifyではテキスト以外に画像やスタンプなども通知できます。ここでは、スタンプの通知の仕方を紹介します。

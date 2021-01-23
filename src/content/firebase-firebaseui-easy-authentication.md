@@ -37,6 +37,7 @@ FirebaseUIとはFirebase Authenticationを使ったログイン機能の実装�
 
 Firebaseの処理では、はじめにメールアドレスによる認証を試し、GoogleとGitHubの設定についても紹介します。
 
+<div class="ads"></div>
 
 ## プロジェクトの初期化
 
@@ -106,6 +107,7 @@ FirebaseUIは初期段階では用意されていないので、自分で追加�
 
 </html>
 ```
+<div class="ads"></div>
 
 ## 認証状態とログアウトの準備
 

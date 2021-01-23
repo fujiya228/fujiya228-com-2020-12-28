@@ -43,6 +43,7 @@ v-show="変数"  v-show="条件式"
   <div style="display: none;">表示されない</div>
 </div>
 ```
+<div class="ads"></div>
 
 ## templateタグ
 複数を同時に切り替えたいときに`v-if`ではtemplateタグを使うことができました。しかし、`v-show`では使えないので注意が必要です。

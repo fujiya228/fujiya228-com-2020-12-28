@@ -24,6 +24,7 @@ let j=3;
 
 console.log(array); // => Array [16, 4, 9, 1]
 ```
+<div class="ads"></div>
 
 ## コードの解説
 上記のコードでは分割代入というJavaScriptの構文を用いて実現しています。

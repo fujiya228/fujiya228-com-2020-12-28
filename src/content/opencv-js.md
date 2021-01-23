@@ -90,6 +90,7 @@ cv.Matは自動でメモリを解放されないので、解放するにはcv.Ma
 ```js:title=JavaScript
 mat.delete();
 ```
+<div class="ads"></div>
 
 ## デモのソースコード
 デモで使っているソースコードを紹介しておきます。

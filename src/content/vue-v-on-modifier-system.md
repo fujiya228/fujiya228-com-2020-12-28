@@ -48,6 +48,7 @@ v-on:イベント.修飾子="ハンドラ"
 |        alt        | Altキー                                                 |
 |        meta       | Macintosh コマンドキー（⌘） windows ウィンドウキー（⊞） |
 | left,right,middle |                   マウスボタンの修飾子                  |
+<div class="ads"></div>
 
 ## exact
 `exact`は修飾子のパターンを制限するのに用いられます。
