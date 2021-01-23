@@ -115,7 +115,7 @@ const IndexPage: React.FC<IndexProps> = props => {
             numPages={props.pageContext.numPages}
           />
         )}
-        <Adsense />
+        <Adsense pathname={props.pageContext.currentPage.toString()} />
         <Footer />
       </Wrapper>
     </IndexLayout>

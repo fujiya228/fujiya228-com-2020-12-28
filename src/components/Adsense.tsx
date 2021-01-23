@@ -8,6 +8,7 @@ declare global {
 }
 
 export interface AdsenseProps {
+  pathname: string;
   isInfead?: boolean;
 }
 
@@ -16,7 +17,7 @@ export const Adsense: React.FC<AdsenseProps> = props => {
     if (window) {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
-  });
+  }, [props.pathname]);
   const client = 'ca-pub-5351220307196429';
   const format = 'fluid';
 

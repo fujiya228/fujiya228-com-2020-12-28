@@ -246,7 +246,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </article>
           </div>
         </main>
-        {/* <Adsense /> */}
+        <Adsense pathname={pathname} />
 
         <ReadNext
           currentPageSlug={location.pathname}
@@ -255,7 +255,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
           pageContext={pageContext}
         />
 
-        {/* <Adsense /> */}
+        <Adsense pathname={pathname} />
         <Footer />
       </Wrapper>
     </IndexLayout>
