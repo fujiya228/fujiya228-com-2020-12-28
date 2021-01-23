@@ -134,7 +134,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
 
   useEffect(() => {
     adsenseReplace();
-  });
+  }, []);
 
   return (
     <IndexLayout className="post-template" postData={postData}>
@@ -244,7 +244,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </article>
           </div>
         </main>
-        <Adsense />
+        {/* <Adsense /> */}
 
         <ReadNext
           currentPageSlug={location.pathname}
@@ -253,7 +253,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
           pageContext={pageContext}
         />
 
-        <Adsense />
+        {/* <Adsense /> */}
         <Footer />
       </Wrapper>
     </IndexLayout>
