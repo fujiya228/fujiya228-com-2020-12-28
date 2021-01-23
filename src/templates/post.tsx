@@ -82,6 +82,25 @@ interface PageTemplateProps {
         };
       }>;
     };
+    recentPosts: {
+      edges: Array<{
+        node: {
+          frontmatter: {
+            title: string;
+            date: string;
+            draft: boolean;
+            image: {
+              childImageSharp: {
+                fluid: FluidObject;
+              };
+            };
+          };
+          fields: {
+            slug: string;
+          };
+        };
+      }>;
+    };
   };
   pageContext: {
     prev: PageContext;
@@ -135,7 +154,6 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   };
 
   useEffect(() => {
-    console.log('change pathname');
     adsenseReplace();
   }, [pathname]);
 
@@ -246,7 +264,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
               <PostContent htmlAst={post.htmlAst} />
             </article>
           </main>
-          <PostAside pathname={pathname} />
+          <PostAside pathname={pathname} recentPosts={data.recentPosts} />
         </div>
 
         <ReadNext
@@ -499,6 +517,30 @@ export const query = graphql`
           frontmatter {
             title
             date
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+    recentPosts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { draft: { ne: true } } }
+      limit: 5
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            image {
+              childImageSharp {
+                fluid(maxWidth: 3720) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug
