@@ -14,7 +14,6 @@ export const adsenseReplace = () => {
   const layout = 'in-article';
   const slot = '1004093357';
   if (window) {
-    // (window.adsbygoogle = window.adsbygoogle || []).push({});
     Array.from(document.getElementsByClassName('ads')).forEach(element => {
       ReactDOM.render(
         <Ins
@@ -25,6 +24,9 @@ export const adsenseReplace = () => {
           data-ad-slot={slot}
         />,
         element,
+        () => {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        },
       );
       console.log('insert ads');
     });
