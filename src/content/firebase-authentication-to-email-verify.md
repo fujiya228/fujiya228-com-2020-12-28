@@ -125,6 +125,8 @@ firebase init
 
 これでfirebaseプロジェクトの初期化は完了です。
 
+<div class="ads"></div>
+
 ## Firebase SDKの初期化
 FirebaseのSDKは初期化しないと使えません。ひとまず、先ほど自動的に作成されたコードをデプロイして初期化されていることを確認してみます。
 

@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import * as _ from 'lodash';
 import { lighten, setLightness } from 'polished';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { css } from '@emotion/react';
@@ -21,6 +21,7 @@ import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
 import TableOfContents from '../components/TableOfContents';
 import { Adsense } from '../components/Adsense';
+import { adsenseReplace } from '../utils/AdsenseReplace';
 
 export interface Author {
   id: string;
@@ -130,6 +131,10 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
     date: post.frontmatter.date,
     image: post.frontmatter.image.childImageSharp.fluid.src,
   };
+
+  useEffect(() => {
+    adsenseReplace();
+  });
 
   return (
     <IndexLayout className="post-template" postData={postData}>
