@@ -14,7 +14,7 @@ export const adsenseReplace = () => {
   const layout = 'in-article';
   const slot = '1004093357';
   if (window) {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // (window.adsbygoogle = window.adsbygoogle || []).push({});
     Array.from(document.getElementsByClassName('ads')).forEach(element => {
       ReactDOM.render(
         <Ins
