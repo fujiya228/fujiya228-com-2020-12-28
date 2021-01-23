@@ -25,10 +25,11 @@ export const adsenseReplace = () => {
         />,
         element,
         () => {
+          // callbackで追加してやらないと、renderされる前にpushしてしまって？、以下のエラーがでる
+          // adsbygoogle.push(): All ins elements in the DOM with class=adsbygoogle already have ads in them.
           (window.adsbygoogle = window.adsbygoogle || []).push({});
         },
       );
-      console.log('insert ads');
     });
   }
 };
