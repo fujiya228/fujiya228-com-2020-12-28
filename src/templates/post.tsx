@@ -111,6 +111,7 @@ export interface PageContext {
 
 const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   const post = data.markdownRemark;
+  const { pathname } = location;
   let width = '';
   let height = '';
   if (post.frontmatter.image?.childImageSharp) {
@@ -134,7 +135,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
 
   useEffect(() => {
     adsenseReplace();
-  }, []);
+  }, [pathname]);
 
   return (
     <IndexLayout className="post-template" postData={postData}>
