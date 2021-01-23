@@ -134,6 +134,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   };
 
   useEffect(() => {
+    console.log('change pathname');
     adsenseReplace();
   }, [pathname]);
 
