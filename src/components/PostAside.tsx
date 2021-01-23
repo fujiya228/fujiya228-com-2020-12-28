@@ -35,7 +35,7 @@ export const PostAside: React.FC<PostAsideProps> = props => {
 
   return (
     <aside id="post-aside" css={PostAsideStyle}>
-      <div>
+      <div className="StickyContainer">
         {props.recentPosts?.edges.map(post => {
           // filter out drafts in production
           return (
@@ -61,10 +61,10 @@ export const PostAside: React.FC<PostAsideProps> = props => {
             )
           );
         })}
-      </div>
-      <div className="AdsContainer">
-        <header>スポンサーリンク</header>
-        <Adsense pathname={pathname} />
+        <div className="Ads">
+          <header>スポンサーリンク</header>
+          <Adsense pathname={pathname} />
+        </div>
       </div>
     </aside>
   );
@@ -78,9 +78,12 @@ const PostAsideStyle = css`
     display: none;
   }
 
-  .AdsContainer {
+  .StickyContainer {
     position: sticky;
     top: 72px;
+  }
+
+  .Ads {
     header {
       width: 100%;
       font-size: 12px;
