@@ -36,35 +36,38 @@ export const PostAside: React.FC<PostAsideProps> = props => {
   return (
     <aside id="post-aside" css={PostAsideStyle}>
       <div className="StickyContainer">
-        {props.recentPosts?.edges.map(post => {
-          // filter out drafts in production
-          return (
-            (!post.node.frontmatter.draft ||
-              process.env.NODE_ENV !== 'production') && (
-              <Link css={PostLink} to={post.node.fields.slug}>
-                <RecentPost key={post.node.fields.slug}>
-                  <PostImage>
-                    {post.node.frontmatter?.image?.childImageSharp?.fluid && (
-                      <Img
-                        alt={`${post.node.frontmatter.title} cover image`}
-                        style={{ height: '100%' }}
-                        fluid={post.node.frontmatter.image.childImageSharp.fluid}
-                      />
-                    )}
-                  </PostImage>
-                  <PostContent>
-                    <PostTitle>{post.node.frontmatter.title}</PostTitle>
-                    <PostDate>{format(new Date(post.node.frontmatter.date), 'yyyy-MM-dd')}</PostDate>
-                  </PostContent>
-                </RecentPost>
-              </Link>
-            )
-          );
-        })}
-        <div className="Ads">
+        <section>
+          <header>Recent Posts</header>
+          {props.recentPosts?.edges.map(post => {
+            // filter out drafts in production
+            return (
+              (!post.node.frontmatter.draft ||
+                process.env.NODE_ENV !== 'production') && (
+                <Link css={PostLink} to={post.node.fields.slug}>
+                  <RecentPost key={post.node.fields.slug}>
+                    <PostImage>
+                      {post.node.frontmatter?.image?.childImageSharp?.fluid && (
+                        <Img
+                          alt={`${post.node.frontmatter.title} cover image`}
+                          style={{ height: '100%' }}
+                          fluid={post.node.frontmatter.image.childImageSharp.fluid}
+                        />
+                      )}
+                    </PostImage>
+                    <PostContent>
+                      <PostTitle>{post.node.frontmatter.title}</PostTitle>
+                      <PostDate>{format(new Date(post.node.frontmatter.date), 'yyyy-MM-dd')}</PostDate>
+                    </PostContent>
+                  </RecentPost>
+                </Link>
+              )
+            );
+          })}
+        </section>
+        <section>
           <header>スポンサーリンク</header>
           <Adsense pathname={pathname} />
-        </div>
+        </section>
       </div>
     </aside>
   );
@@ -83,16 +86,14 @@ const PostAsideStyle = css`
     top: 72px;
   }
 
-  .Ads {
-    header {
-      width: 100%;
-      font-size: 12px;
-      border-top: 3px solid #4e4e4e;
-      padding: 8px 0 8px;
-      font-weight: 700;
-      text-align: center;
-      color: #4e4e4e;
-    }
+  header {
+    width: 100%;
+    font-size: 12px;
+    border-top: 3px solid #4e4e4e;
+    padding: 8px 0 8px;
+    font-weight: 700;
+    text-align: center;
+    color: #4e4e4e;
   }
 `;
 
