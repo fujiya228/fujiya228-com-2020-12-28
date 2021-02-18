@@ -10,3 +10,6 @@
 - id: Firebase
   description: Articles about Firebase.
   image: ../img/taxonomy/firebase-category.png
+- id: Unity
+  description: Articles about Unity.
+  image: ../img/taxonomy/unity-category.png
