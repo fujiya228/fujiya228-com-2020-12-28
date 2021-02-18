@@ -46,6 +46,8 @@ UnityのアセットストアでLogitech Gaming SDKのインストールしま�
 
 [Logitech Gaming SDK | Integration | Unity Asset Store](https://assetstore.unity.com/packages/tools/integration/logitech-gaming-sdk-6630)
 
+<div class="ads"></div>
+
 ## サンプルを使う
 
 新しくシーンを作成して、空のオブジェクトを追加。
@@ -112,6 +114,8 @@ Assets
 ```
 
 ※プロジェクトごとに上書きする必要があるので注意が必要です。
+
+<div class="ads"></div>
 
 ## サンプルの結果
 
