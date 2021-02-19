@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Logitech G29をUnity用にセットアップ'
+title: 'Logitech G29を使うためにLogitechSDKをセットアップ-Unity'
 author: [Fujiya]
-tags: ['Logitech G29','Unity']
+tags: ['Logitech G29','LogitechSDK','Unity']
 category: Unity
 image: 'img/taxonomy/unity.png'
 date: '2021-02-18T20:41:07.100Z'
