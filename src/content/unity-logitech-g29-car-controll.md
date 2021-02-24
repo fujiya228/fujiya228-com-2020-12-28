@@ -26,6 +26,7 @@ excerpt: Unity Article
 
 インポートしたところ以下のようなエラーが発生しました。
 
+<!-- ![standard asset import error](img/standard-asset-import-error.png) -->
 ![standard asset import error](img/standard-asset-import-error.png)
 
 SimpleActivatorMenu.csを変更します。
@@ -48,7 +49,7 @@ public Text camSwitchButton;
 
 以下が今回使う車です。（Standard Assets > Vehicles > Car > Prefabs > Car）
 
-![standard-asset-car.png](img/standard-asset-car.png)
+![standard-asset-car](img/standard-asset-car.png)
 
 この車に、入力を制御するスクリプトCarUserControl.csとこの入力から車を動かすスクリプトCarController.csがアタッチされています。
 
@@ -65,8 +66,6 @@ public Text camSwitchButton;
 - CheckForWheelSpin関連の削除
 
 です。
-
-- 変更（書かない）
 
 ### 完成版
 
