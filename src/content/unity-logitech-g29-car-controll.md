@@ -55,6 +55,8 @@ public Text camSwitchButton;
 
 これらを変更していきます。
 
+<div class="ads"></div>
+
 ## CarController.cs
 
 デフォルトからエフェクトの削除やブレーキの変更などを行います。
@@ -399,6 +401,8 @@ namespace LogitechSDK
     }
 }
 ```
+
+<div class="ads"></div>
 
 ## 車の準備
 

@@ -77,6 +77,8 @@ bool LogiSteeringShutdown();
 LogitechGSDK.LogiSteeringShutdown();
 ```
 
+<div class="ads"></div>
+
 ## 入力の取得
 
 基本的にはLogiGetStateUnityを使って取得します。
@@ -255,6 +257,8 @@ bool LogiPlayLeds(const int index,
 ```csharp:title=C#
 LogitechGSDK.LogiPlayLeds(0, 20, 20, 20);
 ```
+
+<div class="ads"></div>
 
 ## まとめ
 
