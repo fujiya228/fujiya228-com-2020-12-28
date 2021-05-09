@@ -13,3 +13,6 @@
 - id: Unity
   description: Articles about Unity.
   image: ../img/taxonomy/unity-category.png
+- id: Ruby
+  description: Articles about Ruby.
+  image: ../img/taxonomy/ruby-category.png
