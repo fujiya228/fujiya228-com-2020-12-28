@@ -16,3 +16,6 @@
 - id: Ruby
   description: Articles about Ruby.
   image: ../img/taxonomy/ruby-category.png
+- id: Programming
+  description: Articles about Programming.
+  image: ../img/taxonomy/program-category.png
