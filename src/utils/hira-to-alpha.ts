@@ -270,7 +270,7 @@ export const abbreviation = (string: string): string[] => {
       alpha += kanaMap[item] === undefined ? '?' : kanaMap[item];
     }
   });
-  if (alpha.length < 3) {
+  if (alpha.length < 4) {
     return [alpha, alpha];
   }
 
