@@ -27,6 +27,7 @@ import { abbreviation } from '../../utils/hira-to-alpha';
 import { Adsense } from '../../components/Adsense';
 
 export interface AbbreviationProps {
+  pathname: string;
   data: {
     header: {
       childImageSharp: {
@@ -49,8 +50,8 @@ const app_config = {
 const Abbreviation: React.FC<AbbreviationProps> = props => {
   const { width, height } = props.data.header.childImageSharp.fixed;
   const [state, setState] = useState<AbbreviationState>({ inputStr: 'ヤマダたろう', alphaStr: 'yamadatarou', outputStr: 'y9u' });
-  const { pathname } = location;
-  const appURL = config.siteUrl + pathname;
+  const pathname = 'abbreviation-to-a10n';
+  const appURL = `${config.siteUrl}${pathname}`;
 
   const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const [alpha, output] = abbreviation(e?.target?.value);
