@@ -50,7 +50,7 @@ const app_config = {
 const Abbreviation: React.FC<AbbreviationProps> = props => {
   const { width, height } = props.data.header.childImageSharp.fixed;
   const [state, setState] = useState<AbbreviationState>({ inputStr: 'ヤマダたろう', alphaStr: 'yamadatarou', outputStr: 'y9u' });
-  const pathname = 'abbreviation-to-a10n';
+  const pathname = '/abbreviation-to-a10n';
   const appURL = `${config.siteUrl}${pathname}`;
 
   const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
