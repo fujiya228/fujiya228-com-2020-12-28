@@ -19,6 +19,6 @@
 - id: Programming
   description: Articles about Programming.
   image: ../img/taxonomy/program-category.png
-- id: Node.js
+- id: Nodejs
   description: Articles about Node.js.
   image: ../img/taxonomy/nodejs-category.png
