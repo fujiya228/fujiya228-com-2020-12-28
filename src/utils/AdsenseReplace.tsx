@@ -10,7 +10,6 @@ declare global {
 
 export const adsenseReplace = () => {
   const client = 'ca-pub-5351220307196429';
-  const format = 'fluid';
   const layout = 'in-article';
   const slot = '1004093357';
   if (window) {
@@ -20,7 +19,6 @@ export const adsenseReplace = () => {
           className="adsbygoogle"
           data-ad-client={client}
           data-ad-layout={layout}
-          data-ad-format={format}
           data-ad-slot={slot}
         />,
         element,
