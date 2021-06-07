@@ -82,7 +82,7 @@ const PostAsideStyle = css`
   .StickyContainer {
     position: sticky;
     top: 72px;
-    &:first-child {
+    :first-child {
       margin-bottom: 8px;
     }
   }
