@@ -82,9 +82,6 @@ const PostAsideStyle = css`
   .StickyContainer {
     position: sticky;
     top: 72px;
-    :first-child {
-      margin-bottom: 8px;
-    }
   }
 
   header {
@@ -95,6 +92,10 @@ const PostAsideStyle = css`
     font-weight: 700;
     text-align: center;
     color: #4e4e4e;
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
   }
 `;
 
