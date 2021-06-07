@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 declare global {
   interface Window {
@@ -19,20 +18,16 @@ export const Adsense: React.FC<AdsenseProps> = props => {
     }
   }, [props.pathname]);
   const client = 'ca-pub-5351220307196429';
-  const format = 'fluid';
-
-  const layout = props.isInfead ? null : 'in-article';
-  const layoutKey = props.isInfead ? '-6t+ed+2i-1n-4w' : null;
-  const slot = props.isInfead ? '5405028860' : '1004093357';
+  const format = 'auto';
+  const slot = '9106982372';
 
   return (
     <Ins
       className="adsbygoogle"
       data-ad-client={client}
-      data-ad-layout={layout}
-      data-ad-layout-key={layoutKey}
       data-ad-format={format}
       data-ad-slot={slot}
+      data-full-width-responsive="true"
     />
   );
 };
