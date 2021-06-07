@@ -23,6 +23,7 @@ import TableOfContents from '../components/TableOfContents';
 import { Adsense } from '../components/Adsense';
 import { PostAside } from '../components/PostAside';
 import { adsenseReplace } from '../utils/AdsenseReplace';
+import { addCopyButton } from '../utils/add-copy-button';
 
 export interface Author {
   id: string;
@@ -155,6 +156,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
 
   useEffect(() => {
     adsenseReplace();
+    addCopyButton();
   }, [pathname]);
 
   return (
