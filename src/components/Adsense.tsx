@@ -19,7 +19,6 @@ export const Adsense: React.FC<AdsenseProps> = props => {
     }
   }, [props.pathname]);
   const client = 'ca-pub-5351220307196429';
-  const format = 'fluid';
 
   const layout = props.isInfead ? null : 'in-article';
   const layoutKey = props.isInfead ? '-6t+ed+2i-1n-4w' : null;
@@ -33,7 +32,6 @@ export const Adsense: React.FC<AdsenseProps> = props => {
       data-ad-client={client}
       data-ad-layout={layout}
       data-ad-layout-key={layoutKey}
-      data-ad-format={format}
       data-ad-slot={slot}
     />
   );
