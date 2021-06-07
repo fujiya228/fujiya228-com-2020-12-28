@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 declare global {
   interface Window {
@@ -28,6 +29,7 @@ export const Adsense: React.FC<AdsenseProps> = props => {
   return (
     <Ins
       className="adsbygoogle"
+      css={AdsenseCSS}
       data-ad-client={client}
       data-ad-layout={layout}
       data-ad-layout-key={layoutKey}
@@ -36,6 +38,12 @@ export const Adsense: React.FC<AdsenseProps> = props => {
     />
   );
 };
+
+const AdsenseCSS = css`
+  display:block;
+  text-align:center;
+  min-width: 250px;
+`;
 
 const Ins = styled.ins`
   display:block;
