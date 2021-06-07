@@ -84,8 +84,8 @@ const PostAsideStyle = css`
     top: 72px;
   }
 
-  section&:not(:first-child) {
-    margin-top: 8px;
+  section {
+    margin-bottom: 8px;
   }
 
   header {
