@@ -32,7 +32,7 @@ export interface PostAsideProps {
 
 export const PostAside: React.FC<PostAsideProps> = props => {
   const { pathname } = props;
-  const width = window.innerWidth
+  const width = document.body.clientWidth
   let adsense = width > 840 ?
     <section>
       <header>スポンサーリンク</header>
