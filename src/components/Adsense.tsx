@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 declare global {
   interface Window {

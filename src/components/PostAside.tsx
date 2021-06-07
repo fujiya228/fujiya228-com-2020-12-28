@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import { colors } from '../styles/colors';
-import { Adsense } from '../components/Adsense';
 import { format } from 'date-fns';
 
 export interface PostAsideProps {
@@ -31,18 +30,14 @@ export interface PostAsideProps {
 }
 
 export const PostAside: React.FC<PostAsideProps> = props => {
-  const { pathname } = props;
-  const width = document.body.clientWidth
-  let adsense = width > 840 ?
-    <section>
-      <header>スポンサーリンク</header>
-      <Adsense pathname={pathname} />
-    </section> : null;
 
   return (
     <aside id="post-aside" css={PostAsideStyle}>
       <div className="StickyContainer">
-        {adsense}
+        <section>
+          <header>スポンサーリンク</header>
+          <div className="ads" />
+        </section>
         <section>
           <header>Recent Posts</header>
           {props.recentPosts?.edges.map(post => {
