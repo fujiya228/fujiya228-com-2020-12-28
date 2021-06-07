@@ -10,7 +10,6 @@ declare global {
 
 export interface AdsenseProps {
   pathname: string;
-  isInfead?: boolean;
 }
 
 export const Adsense: React.FC<AdsenseProps> = props => {
@@ -29,7 +28,6 @@ export const Adsense: React.FC<AdsenseProps> = props => {
   return (
     <Ins
       className="adsbygoogle"
-      css={AdsenseCSS}
       data-ad-client={client}
       data-ad-layout={layout}
       data-ad-layout-key={layoutKey}
@@ -38,12 +36,6 @@ export const Adsense: React.FC<AdsenseProps> = props => {
     />
   );
 };
-
-const AdsenseCSS = css`
-  display:block;
-  text-align:center;
-  min-width: 250px;
-`;
 
 const Ins = styled.ins`
   display:block;
