@@ -32,10 +32,17 @@ export interface PostAsideProps {
 
 export const PostAside: React.FC<PostAsideProps> = props => {
   const { pathname } = props;
+  const width = window.innerWidth
+  let adsense = width > 840 ?
+    <section>
+      <header>スポンサーリンク</header>
+      <Adsense pathname={pathname} />
+    </section> : null;
 
   return (
     <aside id="post-aside" css={PostAsideStyle}>
       <div className="StickyContainer">
+        {adsense}
         <section>
           <header>Recent Posts</header>
           {props.recentPosts?.edges.map(post => {
@@ -63,10 +70,6 @@ export const PostAside: React.FC<PostAsideProps> = props => {
               )
             );
           })}
-        </section>
-        <section>
-          <header>スポンサーリンク</header>
-          <Adsense pathname={pathname} />
         </section>
       </div>
     </aside>
