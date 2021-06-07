@@ -84,6 +84,10 @@ const PostAsideStyle = css`
     top: 72px;
   }
 
+  section&:not(:first-child) {
+    margin-top: 8px;
+  }
+
   header {
     width: 100%;
     font-size: 12px;
@@ -92,10 +96,6 @@ const PostAsideStyle = css`
     font-weight: 700;
     text-align: center;
     color: #4e4e4e;
-
-    &:not(:first-child) {
-      margin-top: 8px;
-    }
   }
 `;
 
