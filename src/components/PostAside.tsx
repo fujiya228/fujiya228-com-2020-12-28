@@ -74,6 +74,9 @@ export const PostAside: React.FC<PostAsideProps> = props => {
 const PostAsideStyle = css`
   width: 30%;
   padding: 60px 0 0 24px;
+  &:first-child {
+    margin-bottom: 8px;
+  }
 
   @media (max-width: 840px) {
     display: none;
