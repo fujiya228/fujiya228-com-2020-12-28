@@ -18,7 +18,7 @@
   image: ../img/taxonomy/ruby-category.png
 - id: Programming
   description: Articles about Programming.
-  image: ../img/taxonomy/program-category.png
+  image: ../img/taxonomy/programming-category.png
 - id: Nodejs
   description: Articles about Node.js.
   image: ../img/taxonomy/nodejs-category.png
