@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Ubuntu20.04でremote-camera-sdkを使ってDSC-RX0M2を動かす-Programming'
+title: 'Ubuntu20.04でremote-camera-sdkを使ってRX0II(DSC-RX0M2)を動かす-Programming'
 author: [Fujiya]
-tags: ['remote-camera-sdk', 'DSC-RX0M2', 'Ubuntu']
+tags: ['remote-camera-sdk', 'RX0II','DSC-RX0M2', 'Ubuntu']
 category: Programming
 image: 'img/taxonomy/programming.png'
 date: '2021-06-09T00:04:42'
@@ -18,11 +18,11 @@ excerpt: Programming Article
 
 *参考：[Camera Remote SDK](https://support.d-imaging.sony.co.jp/app/sdk/ja/index.html)*
 
-ということで、Linuxとして`Ubuntu20.04`、カメラ`DSC-RX0M2`を動かしてみました。
+ということで、Linuxとして`Ubuntu20.04`、カメラ`RX0II(DSC-RX0M2)`を動かしてみました。
 
-## DSC-RX0M2の本体ソフトウェアアップデート
+## RX0II(DSC-RX0M2)の本体ソフトウェアアップデート
 
-DSC-RX0M2でCamera Remote SDKを使う要件として`Ver. 3.00以降`があるので以下のリンク先の指示に従ってアップデートを行います。
+RX0II(DSC-RX0M2)でCamera Remote SDKを使う要件として`Ver. 3.00以降`があるので以下のリンク先の指示に従ってアップデートを行います。
 
 [DSC-RX0M2本体ソフトウェアアップデート Ver. 3.00](https://support.d-imaging.sony.co.jp/www/cscs/firm/?mdl=DSC-RX0M2&area=jp&lang=jp)
 
@@ -64,7 +64,7 @@ mkdir ~/CrSDK_v1.04.00_20210511a_Linux64PC
 早速`0. Preparation`　＞　`Camera settings and connect to PC(/SBC).`から進めていきたいところですが、いきなり詰まりました。
 
 いくら探しても`PC Remote Function`が見つかりません。
-しばらく操作してわかったのですが`DSC-RX0M2`は、このPDFで示されているソフトウェアとは別のようで、
+しばらく操作してわかったのですが`RX0II(DSC-RX0M2)`は、このPDFで示されているソフトウェアとは別のようで、
 `カメラの設定`　＞　`セットアップ３`　＞　`USB接続`　→　PCリモートにすることで可能なようです。
 
 逆にPDFより簡単になっているのでありがたい。
@@ -95,11 +95,12 @@ sudo update-grub
 
 **確認する**
 
+以下のコマンドで設定ができたか確認します。
 ```bash:title=Command
 cat /sys/module/usbcore/parameters/usbfs_memory_mb
 ```
 
-PDFでは150になっていましたが、自分の環境では反映できていないのか16でした。（自分はそのまま進めて問題なかったです。）
+PDFでは、出力結果が`150`になっていましたが、自分の環境では反映できていないのか`16`でした。（自分はそのまま進めて問題なかったです。）
 
 ### サンプルアプリのビルド
 
@@ -132,7 +133,7 @@ cmake --build .
 
 <div class="ads"></div>
 
-## サンプルアプリでDSC-RX0M2を動かしてみる
+## サンプルアプリでRX0II(DSC-RX0M2)を動かしてみる
 
 準備が整ったはずなので実行してみましょう。
 
@@ -185,5 +186,5 @@ cmake --build .
 <div class="ads"></div>
 
 ## まとめ
-今回は、Ubuntu20.04でremote-camera-sdkを使ってDSC-RX0M2を動かしてみました。
+今回は、Ubuntu20.04でremote-camera-sdkを使ってRX0II(DSC-RX0M2)を動かしてみました。
 時間があればアプリケーションの方もいじって使ってみたいと思います。
