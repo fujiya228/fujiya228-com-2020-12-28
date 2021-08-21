@@ -156,8 +156,8 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                         <Circle center={{ lat: state.mapLat, lng: state.mapLng }} radius={500} options={circleOptions} />
                       </GoogleMap>
                     </LoadScript>
-                    <p><label>緯度</label><span className="text">{Math.floor(state.mapLat * 100000) / 100000}</span></p>
-                    <p><label>経度</label><span className="text">{Math.floor(state.mapLng * 100000) / 100000}</span></p>
+                    <p><label>緯度</label><span className="text">{Math.floor(state.mapLat * 1000) / 1000}</span></p>
+                    <p><label>経度</label><span className="text">{Math.floor(state.mapLng * 1000) / 1000}</span></p>
                     <div className="share">
                       <TwitterShareButton title="title" via={app_config.title} url={appURL} hashtags={[app_config.title]}>
                         <TwitterIcon size={32} borderRadius={4} />
