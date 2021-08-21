@@ -144,7 +144,7 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
               <PostFullContent className="post-full-content">
                 <div className="post-content">
                   <div css={AppContent}>
-                    <LoadScript googleMapsApiKey="AIzaSyBLLxwnSdKnQFDAapcGqMjBhbxz0yUknAg">
+                    <LoadScript googleMapsApiKey="AIzaSyAWRE_mRt_AhQONNAqrgBzZun9Cq28y8wY">
                       <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
