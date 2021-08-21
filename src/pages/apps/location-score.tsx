@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { FixedObject } from 'gatsby-image';
 import { Helmet } from 'react-helmet';
 import { TwitterIcon, TwitterShareButton } from 'react-share';
-import { GoogleMap, LoadScript, Circle } from '@react-google-maps/api';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 import { css } from '@emotion/react';
 
@@ -49,20 +49,6 @@ const containerStyle = {
 const center = {
   lat: 35.69575,
   lng: 139.77521,
-};
-
-const circleOptions = {
-  strokeColor: '#FF0000',
-  strokeOpacity: 0.8,
-  strokeWeight: 2,
-  fillColor: '#FF0000',
-  fillOpacity: 0.35,
-  clickable: false,
-  draggable: false,
-  editable: false,
-  visible: true,
-  radius: 500,
-  zIndex: 1,
 };
 
 const app_config = {
@@ -153,7 +139,7 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                         onDragStart={mapMoveStart}
                         onDrag={mapMove}
                       >
-                        <Circle center={{ lat: state.mapLat, lng: state.mapLng }} radius={500} options={circleOptions} />
+                        <div css={MapCenterIcon} />
                       </GoogleMap>
                     </LoadScript>
                     <p><label>緯度</label><span className="text">{state.mapLat.toFixed(3)}</span></p>
@@ -238,6 +224,35 @@ const AppContent = css`
     button {
       width: 100%;
     }
+  }
+  img {
+    margin: 0;
+  }
+`;
+
+const MapCenterIcon = css`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50% - 2px);
+  &::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: calc(50% - 2px) 0;
+    background: black;
+    position: absolute;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 40px;
+    margin: 0 calc(50% - 2px);
+    background: black;
+    position: absolute;
   }
 `;
 
