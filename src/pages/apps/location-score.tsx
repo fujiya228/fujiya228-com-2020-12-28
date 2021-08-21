@@ -66,8 +66,8 @@ const circleOptions = {
 };
 
 const app_config = {
-  title: 'みんなのi18n',
-  description: 'internationalization ＝＞ i18n や localization ＝＞ l10n といった変換をしてくれるアプリケーション',
+  title: '土地スカウター',
+  description: '土地の戦闘力を計測しよう！',
 };
 
 const LocationScore: React.FC<LocationScoreProps> = props => {
@@ -138,7 +138,7 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
           <div css={inner}>
             <article className="post page" css={[PostFull, NoImage]}>
               <PostFullHeader className="post-full-header">
-                <PostFullTitle className="post-full-title">みんなのi18n | 省略化アプリケーション</PostFullTitle>
+                <PostFullTitle className="post-full-title">{app_config.title}</PostFullTitle>
               </PostFullHeader>
 
               <PostFullContent className="post-full-content">
