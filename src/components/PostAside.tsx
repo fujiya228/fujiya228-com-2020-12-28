@@ -30,7 +30,6 @@ export interface PostAsideProps {
 }
 
 export const PostAside: React.FC<PostAsideProps> = props => {
-
   return (
     <aside id="post-aside" css={PostAsideStyle}>
       <div className="StickyContainer">
