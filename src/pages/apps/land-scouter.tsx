@@ -186,6 +186,7 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                         <span>シェアする</span>
                       </TwitterShareButton>
                     </div>
+                    <div className="overlay" />
                   </div>
                 </div>
               </PostFullContent>
@@ -274,6 +275,16 @@ const AppContent = css`
     button {
       width: 100%;
     }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: black;
+    opacity: 0.6;
   }
   img {
     margin: 0;
