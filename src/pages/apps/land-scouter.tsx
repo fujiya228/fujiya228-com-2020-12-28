@@ -138,6 +138,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
             );
           } else {
             console.log('リクエストに問題が発生しました');
+            notifyError();
           }
 
           closeOverlay();
@@ -145,6 +146,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
       } catch (e: unknown) {
         console.log('例外を捕捉');
         closeOverlay();
+        notifyError();
       }
     };
 
@@ -159,6 +161,17 @@ const LandScouter: React.FC<LandScouterProps> = props => {
 
   const closeOverlay = () => {
     setTimeout(() => setIsLoading(false), 2000);
+  };
+
+  const notifyError = () => {
+    const error = document.getElementById('error');
+    ReactDOM.render(
+      <div>
+        <span className="error_title">エラー</span>
+        <span className="error_message">申し訳ありません。エラーが発生したため正しく処理できませんでした。</span>
+      </div>,
+      error,
+    );
   };
 
   return (
@@ -231,6 +244,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                       <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng} /></p>
                       <p><button type="button" className="button" onClick={requestScore}>計測</button></p>
                     </div>
+                    <div className="error" id="error" />
                     <div className="result" id="result">
                       <div id="result-score" />
                       <div className="button share">
@@ -331,6 +345,21 @@ const AppContent = css`
     transition: .3s ease-in-out;
     &:hover {
       opacity: 0.6;
+    }
+  }
+  .error {
+    width: 100%;
+    span {
+      display: block;
+      width: 100%;
+      font-weight: bold;
+    }
+    &_title {
+      font-size: 32px;
+      margin: 8px 0;
+    }
+    &_message {
+
     }
   }
   #result {
