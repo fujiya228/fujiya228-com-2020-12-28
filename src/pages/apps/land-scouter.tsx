@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { graphql } from 'gatsby';
 import { FixedObject } from 'gatsby-image';
 import { Helmet } from 'react-helmet';
@@ -95,7 +96,41 @@ const LandScouter: React.FC<LandScouterProps> = props => {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
           if (httpRequest.status === 200) {
             const response = JSON.parse(httpRequest.responseText);
-            console.log(response);
+            const resultScore = document.getElementById('result-score');
+            const resultPlaces = document.getElementById('result-places');
+            const places: Record<string, number> = response?.places;
+            const placesDOM = [];
+
+            for (const [key, value] of Object.entries(places)) {
+              placesDOM.push(
+                <tr key={key}>
+                  <td>{key}</td>
+                  <td>{value}</td>
+                </tr>,
+              );
+            }
+
+            ReactDOM.render(
+              <div>
+                <span className="result_title">戦闘力</span>
+                <span className="result_score">{response.score}</span>
+              </div>,
+              resultScore,
+            );
+            ReactDOM.render(
+              <table>
+                <thead>
+                  <tr>
+                    <th>Place type</th>
+                    <th>Number of Place</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {placesDOM}
+                </tbody>
+              </table>,
+              resultPlaces,
+            );
           } else {
             console.log('リクエストに問題が発生しました');
           }
@@ -108,7 +143,8 @@ const LandScouter: React.FC<LandScouterProps> = props => {
       }
     };
 
-    httpRequest.open('GET', `https://fujiya-api.herokuapp.com/api/v1/location_scores/${locationId()}`);
+    // httpRequest.open('GET', `https://fujiya-api.herokuapp.com/api/v1/location_scores/${locationId()}`);
+    httpRequest.open('GET', `http://localhost:3000/api/v1/location_scores/${locationId()}`);
     httpRequest.send();
   };
 
@@ -190,11 +226,15 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                       <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng} /></p>
                       <p><button type="button" className="button" onClick={requestScore}>計測</button></p>
                     </div>
-                    <div className="button share">
-                      <TwitterShareButton title="title" via={app_config.title} url={appURL} hashtags={[app_config.title]}>
-                        <TwitterIcon size={32} borderRadius={4} />
-                        <span>シェアする</span>
-                      </TwitterShareButton>
+                    <div className="result">
+                      <div id="result-score" />
+                      <div className="button share">
+                        <TwitterShareButton title="title" via={app_config.title} url={appURL} hashtags={[app_config.title]}>
+                          <TwitterIcon size={32} borderRadius={4} />
+                          <span>シェアする</span>
+                        </TwitterShareButton>
+                      </div>
+                      <div id="result-places" />
                     </div>
                     <div className={['overlay', isLoading ? 'open' : ''].join(' ')}>
                       <div className="container">
@@ -261,7 +301,7 @@ const AppContent = css`
     display: flex;
     flex-wrap: wrap;
     button {
-      background: #4ee04e;
+      background: #e04e4e;
       color: white;
       font-weight: bold;
     }
@@ -286,6 +326,31 @@ const AppContent = css`
     transition: .3s ease-in-out;
     &:hover {
       opacity: 0.6;
+    }
+  }
+  .result {
+    width: 100%;
+    #result-score {
+      padding: 48px;
+      margin-bottom: 48px;
+      border-radius: 12px;
+      text-align: center;
+      background: #e04e4e;
+      span {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+    &_title {
+      margin-bottom: 24px;
+      color: white;
+      font-size: 32px;
+    }
+    &_score {
+      padding: 48px;
+      background: white;
+      font-size: 64px;
     }
   }
   .share {
