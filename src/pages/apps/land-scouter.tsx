@@ -61,7 +61,8 @@ const LandScouter: React.FC<LandScouterProps> = props => {
   const { width, height } = props.data.header.childImageSharp.fixed;
   const [state, setState] = useState<LandScouterState>({ mapLat: 0, mapLng: 0 });
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const pathname = '/land-scouter';
+  const [shareText, setShareText] = useState<string>('');
+  const pathname = '/apps/land-scouter';
   const appURL = `${config.siteUrl}${pathname}`;
 
   const [map, setMap] = useState<any>();
@@ -100,6 +101,8 @@ const LandScouter: React.FC<LandScouterProps> = props => {
             const resultPlaces = document.getElementById('result-places');
             const places: Record<string, number> = response?.places;
             const placesDOM = [];
+
+            setShareText(`緯度：${response.location.latitude}、経度：${response.location.longitude}の戦闘力は${response.score}でした！！！`);
 
             document.getElementById('result')?.classList.add('open');
 
@@ -231,7 +234,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                     <div className="result" id="result">
                       <div id="result-score" />
                       <div className="button share">
-                        <TwitterShareButton title="title" via={app_config.title} url={appURL} hashtags={[app_config.title]}>
+                        <TwitterShareButton title={shareText} url={appURL} hashtags={[app_config.title]}>
                           <TwitterIcon size={32} borderRadius={4} />
                           <span>シェアする</span>
                         </TwitterShareButton>
