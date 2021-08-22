@@ -26,7 +26,7 @@ import { colors } from '../../styles/colors';
 import config from '../../website-config';
 import { Adsense } from '../../components/Adsense';
 
-export interface LocationScoreProps {
+export interface LandScouterProps {
   pathname: string;
   data: {
     header: {
@@ -36,7 +36,7 @@ export interface LocationScoreProps {
     };
   };
 }
-interface LocationScoreState {
+interface LandScouterState {
   mapLat: number;
   mapLng: number;
 }
@@ -56,9 +56,10 @@ const app_config = {
   description: '土地の戦闘力を計測しよう！',
 };
 
-const LocationScore: React.FC<LocationScoreProps> = props => {
+const LandScouter: React.FC<LandScouterProps> = props => {
   const { width, height } = props.data.header.childImageSharp.fixed;
-  const [state, setState] = useState<LocationScoreState>({ mapLat: 0, mapLng: 0 });
+  const [state, setState] = useState<LandScouterState>({ mapLat: 0, mapLng: 0 });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const pathname = '/land-scouter';
   const appURL = `${config.siteUrl}${pathname}`;
 
@@ -82,6 +83,8 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
   const requestScore = () => {
     const httpRequest = new XMLHttpRequest();
 
+    setIsLoading(true);
+
     if (!httpRequest) {
       console.log('中断 :( XMLHTTP インスタンスを生成できませんでした');
       return false;
@@ -96,9 +99,12 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
           } else {
             console.log('リクエストに問題が発生しました');
           }
+
+          closeOverlay();
         }
       } catch (e: unknown) {
         console.log('例外を捕捉');
+        closeOverlay();
       }
     };
 
@@ -108,6 +114,10 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
 
   const locationId = () => {
     return `${state.mapLat.toString().replace('.', '\'')}_${state.mapLng.toString().replace('.', '\'')}`;
+  };
+
+  const closeOverlay = () => {
+    setTimeout(() => setIsLoading(false), 2000);
   };
 
   return (
@@ -186,7 +196,7 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                         <span>シェアする</span>
                       </TwitterShareButton>
                     </div>
-                    <div className="overlay">
+                    <div className={['overlay', isLoading ? 'open' : ''].join(' ')}>
                       <div className="container">
                         <div className="c1">計</div>
                         <div className="c2">測</div>
@@ -294,8 +304,14 @@ const AppContent = css`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 100;
     background: rgba(0,0,0,0.6);
+    transition: .3s;
+    opacity: 0;
+    z-index: -1;
+    &.open {
+      opacity: 1;
+      z-index: 100;
+    }
     .container {
       display: flex;
       justify-content: center;
@@ -361,4 +377,4 @@ const MapCenterIcon = css`
   }
 `;
 
-export default LocationScore;
+export default LandScouter;
