@@ -74,7 +74,9 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
   };
 
   const mapMove = () => {
-    setState({ mapLat: map.center.lat(), mapLng: map.center.lng() });
+    setState({
+      mapLat: map.center.lat().toFixed(3), mapLng: map.center.lng().toFixed(3),
+    });
   };
 
   const requestScore = () => {
@@ -147,8 +149,8 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                       </GoogleMap>
                     </LoadScript>
                     <div className="controller">
-                      <p><label>緯度</label><input readOnly className="text" type="text" value={state.mapLat.toFixed(3)} /></p>
-                      <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng.toFixed(3)} /></p>
+                      <p><label>緯度</label><input readOnly className="text" type="text" value={state.mapLat} /></p>
+                      <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng} /></p>
                       <p><button type="button" className="button" onClick={requestScore}>計測</button></p>
                     </div>
                     <div className="button share">
