@@ -273,8 +273,6 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                         <div className="c6">・</div>
                       </div>
                     </div>
-                    <div className="fixed_ads left"><Adsense pathname={pathname} /></div>
-                    <div className="fixed_ads right"><Adsense pathname={pathname} /></div>
                   </div>
                 </div>
               </PostFullContent>
