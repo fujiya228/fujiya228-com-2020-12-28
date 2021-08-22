@@ -77,6 +77,10 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
     setState({ mapLat: map.center.lat(), mapLng: map.center.lng() });
   };
 
+  const requestScore = () => {
+    console.log('request');
+  };
+
   return (
     <IndexLayout>
       <Helmet>
@@ -142,9 +146,12 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                         <div css={MapCenterIcon} />
                       </GoogleMap>
                     </LoadScript>
-                    <p><label>緯度</label><span className="text">{state.mapLat.toFixed(3)}</span></p>
-                    <p><label>経度</label><span className="text">{state.mapLng.toFixed(3)}</span></p>
-                    <div className="share">
+                    <div className="controller">
+                      <p><label>緯度</label><input readOnly className="text" type="text" value={state.mapLat.toFixed(3)} /></p>
+                      <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng.toFixed(3)} /></p>
+                      <p><button type="button" className="button" onClick={requestScore}>計測</button></p>
+                    </div>
+                    <div className="button share">
                       <TwitterShareButton title="title" via={app_config.title} url={appURL} hashtags={[app_config.title]}>
                         <TwitterIcon size={32} borderRadius={4} />
                         <span>シェアする</span>
@@ -197,23 +204,33 @@ const AppContent = css`
   text-align: center;
   label {
     display: inline-block;
-    width: 200px;
+    width: 50px;
+  }
+  .controller {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    button {
+      background: #4ee04e;
+      color: white;
+      font-weight: bold;
+    }
   }
   .text {
-    width: 200px;
+    width: 100px;
     height: 32px;
     border-radius: 4px;
     border: solid 1px black;
+    text-align: center;
   }
   .output {
     background: #eee;
   }
-  .share {
+  .button {
     width: 160px;
     margin: 0 auto;
     border-radius: 4px;
-    background: #00aced;
-    color:white;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     line-height: 32px;
@@ -221,6 +238,10 @@ const AppContent = css`
     &:hover {
       opacity: 0.6;
     }
+  }
+  .share {
+    background: #00aced;
+    color:white;
     button {
       width: 100%;
     }
