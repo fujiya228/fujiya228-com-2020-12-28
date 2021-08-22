@@ -150,8 +150,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
       }
     };
 
-    // httpRequest.open('GET', `https://fujiya-api.herokuapp.com/api/v1/location_scores/${locationId()}`);
-    httpRequest.open('GET', `http://localhost:3000/api/v1/location_scores/${locationId()}`);
+    httpRequest.open('GET', `https://fujiya-api.herokuapp.com/api/v1/location_scores/${locationId()}`);
     httpRequest.send();
   };
 
