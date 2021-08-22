@@ -101,6 +101,8 @@ const LandScouter: React.FC<LandScouterProps> = props => {
             const places: Record<string, number> = response?.places;
             const placesDOM = [];
 
+            document.getElementById('result')?.classList.add('open');
+
             for (const [key, value] of Object.entries(places)) {
               placesDOM.push(
                 <tr key={key}>
@@ -226,7 +228,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                       <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng} /></p>
                       <p><button type="button" className="button" onClick={requestScore}>計測</button></p>
                     </div>
-                    <div className="result">
+                    <div className="result" id="result">
                       <div id="result-score" />
                       <div className="button share">
                         <TwitterShareButton title="title" via={app_config.title} url={appURL} hashtags={[app_config.title]}>
@@ -328,6 +330,12 @@ const AppContent = css`
       opacity: 0.6;
     }
   }
+  #result {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
   .result {
     width: 100%;
     #result-score {
@@ -348,7 +356,7 @@ const AppContent = css`
       font-size: 32px;
     }
     &_score {
-      padding: 48px;
+      padding: 48px 0;
       background: white;
       font-size: 64px;
     }
