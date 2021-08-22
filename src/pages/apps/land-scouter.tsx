@@ -264,6 +264,8 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                         <div className="c6">・</div>
                       </div>
                     </div>
+                    <div className="fixed_ads left"><Adsense pathname={pathname} /></div>
+                    <div className="fixed_ads right"><Adsense pathname={pathname} /></div>
                   </div>
                 </div>
               </PostFullContent>
@@ -448,6 +450,19 @@ const AppContent = css`
         20%, 50% { transform: translateY(-3rem); }
         50%, 100% { transform: translateY(0); }
       }
+    }
+  }
+  .fixed_ads {
+    position: fixed;
+    top: 140px;
+    height: 700px;
+    width: 200px;
+    background: #eee;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
     }
   }
   img {
