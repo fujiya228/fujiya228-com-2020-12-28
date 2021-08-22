@@ -186,7 +186,16 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
                         <span>シェアする</span>
                       </TwitterShareButton>
                     </div>
-                    <div className="overlay" />
+                    <div className="overlay">
+                      <div className="container">
+                        <div className="c1">計</div>
+                        <div className="c2">測</div>
+                        <div className="c3">中</div>
+                        <div className="c4">・</div>
+                        <div className="c5">・</div>
+                        <div className="c6">・</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </PostFullContent>
@@ -278,13 +287,48 @@ const AppContent = css`
   }
   .overlay {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 100;
-    background: black;
-    opacity: 0.6;
+    background: rgba(0,0,0,0.6);
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 50%;
+      z-index: 100;
+      .c1, .c2, .c3, .c4, .c5, .c6 {
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+        margin: 0 4px;
+        font-weight: bold;
+        font-size: 32px;
+        animation: move;
+        animation-timing-function: cubic-bezier(0.15,-0.01, 0.58, 1);
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        will-change: transform;
+      }
+
+      .c1 { animation-delay: 0s; }
+      .c2 { animation-delay: 0.1s; }
+      .c3 { animation-delay: 0.2s; }
+      .c4 { animation-delay: 0.3s; }
+      .c5 { animation-delay: 0.4s; }
+      .c6 { animation-delay: 0.5s; }
+
+      @keyframes move {
+        0%, 20% { transform: translateY(0); }
+        20%, 50% { transform: translateY(-3rem); }
+        50%, 100% { transform: translateY(0); }
+      }
+    }
   }
   img {
     margin: 0;
