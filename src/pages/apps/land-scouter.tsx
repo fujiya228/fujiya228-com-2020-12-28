@@ -80,7 +80,34 @@ const LocationScore: React.FC<LocationScoreProps> = props => {
   };
 
   const requestScore = () => {
-    console.log('request');
+    const httpRequest = new XMLHttpRequest();
+
+    if (!httpRequest) {
+      console.log('中断 :( XMLHTTP インスタンスを生成できませんでした');
+      return false;
+    }
+
+    httpRequest.onreadystatechange = () => {
+      try {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            const response = JSON.parse(httpRequest.responseText);
+            console.log(response);
+          } else {
+            console.log('リクエストに問題が発生しました');
+          }
+        }
+      } catch (e: unknown) {
+        console.log('例外を捕捉');
+      }
+    };
+
+    httpRequest.open('GET', `https://fujiya-api.herokuapp.com/api/v1/location_scores/${locationId()}`);
+    httpRequest.send();
+  };
+
+  const locationId = () => {
+    return `${state.mapLat.toString().replace('.', '\'')}_${state.mapLng.toString().replace('.', '\'')}`;
   };
 
   return (
