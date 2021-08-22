@@ -59,7 +59,7 @@ const app_config = {
 const LocationScore: React.FC<LocationScoreProps> = props => {
   const { width, height } = props.data.header.childImageSharp.fixed;
   const [state, setState] = useState<LocationScoreState>({ mapLat: 0, mapLng: 0 });
-  const pathname = '/abbreviation-to-a10n';
+  const pathname = '/land-scouter';
   const appURL = `${config.siteUrl}${pathname}`;
 
   const [map, setMap] = useState<any>();
