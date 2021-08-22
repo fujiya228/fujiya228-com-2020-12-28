@@ -86,6 +86,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
     const httpRequest = new XMLHttpRequest();
 
     setIsLoading(true);
+    delError();
 
     if (!httpRequest) {
       console.log('中断 :( XMLHTTP インスタンスを生成できませんでした');
@@ -169,6 +170,14 @@ const LandScouter: React.FC<LandScouterProps> = props => {
         <span className="error_title">エラー</span>
         <span className="error_message">申し訳ありません。エラーが発生したため正しく処理できませんでした。</span>
       </div>,
+      error,
+    );
+  };
+
+  const delError = () => {
+    const error = document.getElementById('error');
+    ReactDOM.render(
+      <div />,
       error,
     );
   };
