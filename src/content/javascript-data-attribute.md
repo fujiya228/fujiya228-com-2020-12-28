@@ -52,8 +52,8 @@ el = document.createElement("div");
 el.setAttribute('data-user', 'Alice');
 
 // data属性の存在確認
-console.log(el.hasAttribute('data-user')); // true
-console.log(el.hasAttribute('data-id')); // false
+console.log(el.hasAttribute('data-user')); // => true
+console.log(el.hasAttribute('data-id')); // => false
 
 // data属性の取得
 console.log(el.getAttribute('data-user')); // => Alice
@@ -64,7 +64,7 @@ console.log(el.getAttribute('data-user')); // => Bob
 
 // data属性の削除
 delete el.removeAttribute('data-user');
-console.log(el.hasAttribute('data-user')); // false
+console.log(el.hasAttribute('data-user')); // => false
 ```
 
 ## dataset
@@ -77,8 +77,8 @@ el = document.createElement("div");
 el.dataset.user = 'Alice';
 
 // data属性の存在確認
-console.log('user' in el.dataset); // true
-console.log('id' in el.dataset); // false
+console.log('user' in el.dataset); // => true
+console.log('id' in el.dataset); // => false
 
 // data属性の取得
 console.log(el.dataset.user); // => Alice
@@ -89,7 +89,7 @@ console.log(el.dataset.user); // => Bob
 
 // data属性の削除
 delete el.dataset.user;
-console.log('user' in el.dataset); // false
+console.log('user' in el.dataset); // => false
 ```
 
 <div class="ads"></div>
