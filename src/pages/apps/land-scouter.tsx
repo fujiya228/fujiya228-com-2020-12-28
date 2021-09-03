@@ -247,6 +247,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                         <div css={MapCenterIcon} />
                       </GoogleMap>
                     </LoadScript>
+                    <Adsense pathname={pathname} />
                     <div className="controller">
                       <p><label>緯度</label><input readOnly className="text" type="text" value={state.mapLat} /></p>
                       <p><label>経度</label><input readOnly className="text" type="text" value={state.mapLng} /></p>
