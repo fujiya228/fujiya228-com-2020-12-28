@@ -247,7 +247,7 @@ const LandScouter: React.FC<LandScouterProps> = props => {
                         <div css={MapCenterIcon} />
                       </GoogleMap>
                     </LoadScript>
-                    <div className="controller">
+                    <div className="ads-container">
                       <Adsense pathname={pathname} />
                     </div>
                     <div className="controller">
@@ -324,6 +324,9 @@ const AppContent = css`
   label {
     display: inline-block;
     width: 50px;
+  }
+  .ads-container {
+    width: 100%;
   }
   .controller {
     width: 100%;
