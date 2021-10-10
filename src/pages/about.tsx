@@ -83,6 +83,8 @@ const About: React.FC = () => (
                 <p>
                   直近ではマイクロサービスアーキテクチャについての理解を深めたいので、個人的に簡単なサービスを作ってみたいと考えています！
                 </p>
+                <h2>経歴</h2>
+                <iframe seamless width="100%" height="500px" frameBorder="0" src="https://app.the-timeline.jp/2PACX-1vTwcswVhvoJu3AwKeEJ_Jt0jeZjQINh0wOmSceqiyuKwYlfwu9Fm4vcnLhFQt4_QQhcU5CugiH_YO0d" />
               </div>
             </PostFullContent>
           </article>
