@@ -63,6 +63,14 @@ set -Ux fish_user_paths $HOME/.nodenv/bin $fish_user_paths
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 ```
 
+```bash:title=結果
+Checking for `nodenv` in PATH: /Users/<username>/.nodenv/bin/nodenv
+Checking for `nodenv shims` in PATH: OK
+Checking `nodenv install` support: /Users/<username>/.nodenv/plugins/node-build/bin/nodenv-install (node-build 4.9.64)
+Counting installed Node versions: 1 versions
+Auditing installed plugins: OK
+```
+
 ### ruby-buildをインストール
 [node-build](https://github.com/nodenv/node-build#readme)は、`nodenv install` コマンドを提供するnodenvのプラグインです。いくつかインストール方法がありますが、今回はnodenvのプラグインへインストールします。
 
