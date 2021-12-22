@@ -103,6 +103,11 @@ Auditing installed plugins: OK
 nodenv -v
 ```
 
+### nodeをインストールする
+```bash:title=command
+nodenv install 14.18.0
+```
+
 ## おまけ： nodenv-installer
 
 [nodenv-installer](https://github.com/nodenv/nodenv-installer#nodenv-installer)を用いることで、自動的に`nodenv`,`node-build`をインストールすることができます。
