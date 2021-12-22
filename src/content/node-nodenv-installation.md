@@ -61,20 +61,8 @@ set -Ux fish_user_paths $HOME/.nodenv/bin $fish_user_paths
 [node-build](https://github.com/nodenv/node-build#readme)は、`nodenv install` コマンドを提供するnodenvのプラグインです。いくつかインストール方法がありますが、今回はnodenvのプラグインへインストールします。
 
 ```bash:title=command
-mkdir -p "$(nodenv root)"/plugins
-git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
-```
-
-`fish`で以下のようなエラーが出た場合は次のように修正して実行してください。
-
-```bash:title=エラー
-fish: $(...) is not supported. In fish, please use '(nodenv)'.
-mkdir -p "$(nodenv root)"/plugins
-```
-
-```bash:title=command
-mkdir -p "(nodenv root)"/plugins
-git clone https://github.com/nodenv/node-build.git "(nodenv root)"/plugins/node-build
+mkdir -p $HOME/.nodenv/plugins
+git clone https://github.com/nodenv/node-build.git $HOME/.nodenv/plugins/node-build
 ```
 
 ### nodenvが正しく設定されていることを確認する
