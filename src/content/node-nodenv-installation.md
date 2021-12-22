@@ -92,7 +92,9 @@ curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doct
 Checking for `nodenv` in PATH: /Users/<username>/.nodenv/bin/nodenv
 Checking for `nodenv shims` in PATH: OK
 Checking `nodenv install` support: /Users/<username>/.nodenv/plugins/node-build/bin/nodenv-install (node-build 4.9.64)
-Counting installed Node versions: 1 versions
+Counting installed Node versions: none
+  There aren't any Node versions installed under `/Users/fujiya/.nodenv/versions'.
+  You can install Node versions like so: nodenv install 2.2.4
 Auditing installed plugins: OK
 ```
 
