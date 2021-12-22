@@ -65,6 +65,18 @@ mkdir -p "$(nodenv root)"/plugins
 git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 ```
 
+`fish`で以下のようなエラーが出た場合は次のように修正して実行してください。
+
+```bash:title=エラー
+fish: $(...) is not supported. In fish, please use '(nodenv)'.
+mkdir -p "$(nodenv root)"/plugins
+```
+
+```bash:title=command
+mkdir -p "(nodenv root)"/plugins
+git clone https://github.com/nodenv/node-build.git "(nodenv root)"/plugins/node-build
+```
+
 ### nodenvが正しく設定されていることを確認する
 以下のコマンドで`nodenv-doctor`を使って、チェックを行ってくれます。
 ```bash:title=command
