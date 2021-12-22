@@ -16,7 +16,7 @@ Node.jsのバージョン管理ツールである`nodenv`のインストール�
 インストールの方法は大きく分けて以下の**２通り**の方法があります。
 
 - パッケージマネージャーを用いる方法
-- GitHubからクローンする方法
+- GitHubからクローンする方法 [nodenv/nodenv installation](https://github.com/nodenv/nodenv#installation)
 
 今回は、2つ目のGitHubからクローンする方法をまとめておきます。
 
