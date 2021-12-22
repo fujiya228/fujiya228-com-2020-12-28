@@ -57,6 +57,14 @@ set -Ux fish_user_paths $HOME/.nodenv/bin $fish_user_paths
 
 通常、一度シェルを閉じてまた開き直すことで反映されます。
 
+### ruby-buildをインストール
+[node-build](https://github.com/nodenv/node-build#readme)は、`nodenv install` コマンドを提供するnodenvのプラグインです。いくつかインストール方法がありますが、今回はnodenvのプラグインへインストールします。
+
+```bash:title=command
+mkdir -p "$(nodenv root)"/plugins
+git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+```
+
 ### nodenvが正しく設定されていることを確認する
 以下のコマンドで`nodenv-doctor`を使って、チェックを行ってくれます。
 ```bash:title=command
@@ -69,14 +77,6 @@ Checking for `nodenv shims` in PATH: OK
 Checking `nodenv install` support: /Users/<username>/.nodenv/plugins/node-build/bin/nodenv-install (node-build 4.9.64)
 Counting installed Node versions: 1 versions
 Auditing installed plugins: OK
-```
-
-### ruby-buildをインストール
-[node-build](https://github.com/nodenv/node-build#readme)は、`nodenv install` コマンドを提供するnodenvのプラグインです。いくつかインストール方法がありますが、今回はnodenvのプラグインへインストールします。
-
-```bash:title=command
-mkdir -p "$(nodenv root)"/plugins
-git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 ```
 
 ### 実行してバージョン確認してみる
