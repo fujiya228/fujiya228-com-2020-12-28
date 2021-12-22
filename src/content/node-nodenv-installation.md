@@ -48,6 +48,23 @@ echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
 set -Ux fish_user_paths $HOME/.nodenv/bin $fish_user_paths
 ```
 
+### nodenv shimsのパスを通す
+
+以下にあるコマンドから自分の使っている環境（シェル）にあったものを実行し、`nodenv shims`のパスを通します。
+
+```bash:title=bash
+echo 'export PATH="$HOME/.nodenv/shims:$PATH"' >> ~/.bash_profile
+```
+```bash:title=Ubuntu Desktop
+echo 'export PATH="$HOME/.nodenv/shims:$PATH"' >> ~/.bashrc
+```
+```bash:title=Zsh
+echo 'export PATH="$HOME/.nodenv/shims:$PATH"' >> ~/.zshrc
+```
+```bash:title=Fish shell
+set -Ux fish_user_paths $HOME/.nodenv/shims $fish_user_paths
+```
+
 ### シェルにnodenvを設定する
 ```bash:title=command
 ~/.nodenv/bin/nodenv init
