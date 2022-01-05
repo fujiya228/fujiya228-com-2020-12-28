@@ -23,6 +23,8 @@ fish環境でも`Homebrew(brew)`をインストールできる手順をまとめ
 2. HomebrewのPATHを通すための準備
 3. シェルを再起動してバージョン確認
 
+<div class="ads"></div>
+
 ### 1. インストールコマンド実行
 
 以下のコマンドでインストール
@@ -62,6 +64,8 @@ Homebrew/homebrew-core (git revision 9e894306ad4; last commit 2022-01-03)
 インストールはここまでです！
 
 以下では、公式の方法がなぜインストールできなかったか調査した結果をまとめていきます。
+
+<div class="ads"></div>
 
 ## 公式がなぜインストールできなかったか
 
@@ -115,6 +119,8 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | 
 
 これでインストールができるようになりました。
 
+<div class="ads"></div>
+
 ### インストール後
 
 インストールが終わると以下のようにPATHを通すように指示されます。
@@ -147,9 +153,9 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 ```
 
 fishを起動するたびにパスを通し直すのは大変なので、fishのconfigに記述して起動時に実行するようにします。
-今回も$が使えないことには注意しておきます
+今回も$が使えないことには注意しておきます。
 
-`~/.config/fish/config.fish`に以下を実行するように追記する
+`~/.config/fish/config.fish`に以下を実行するように追記します。
 
 ```bash:title=command
 eval (/opt/homebrew/bin/brew shellenv)
