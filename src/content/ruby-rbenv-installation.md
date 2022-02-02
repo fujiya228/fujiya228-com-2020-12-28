@@ -79,12 +79,6 @@ set -Ux fish_user_paths $HOME/.rbenv/shims $fish_user_paths
 
 通常、一度シェルを閉じてまた開き直すことで反映されます。
 
-### rbenvが正しく設定されていることを確認する
-以下のコマンドで`rbenv-doctor`を使って、チェックを行ってくれます。
-```bash:title=command
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
-```
-
 ### ruby-buildをインストール
 [ruby-build](https://github.com/rbenv/ruby-build#readme)は、`rbenv install` コマンドを提供するrbenvのプラグインです。いくつかインストール方法がありますが、今回はrbenvのプラグインへインストールします。
 
@@ -93,6 +87,12 @@ ruby-buildには必要なライブラリがあるので、[rbenv/ruby-build](htt
 ```bash:title=command
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+```
+
+### rbenvが正しく設定されていることを確認する
+以下のコマンドで`rbenv-doctor`を使って、チェックを行ってくれます。
+```bash:title=command
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 ```
 
 ### 実行してバージョン確認してみる
