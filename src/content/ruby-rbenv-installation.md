@@ -95,6 +95,17 @@ git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-buil
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 ```
 
+```bash:title=結果
+Checking for `rbenv` in PATH: /Users/<username>/.rbenv/bin/rbenv
+Checking for rbenv shims in PATH: OK
+Checking 'rbenv install' support: /Users/<username>/.rbenv/plugins/ruby-build/bin/rbenv-install (ruby-build 20220125)
+Counting installed Ruby versions: none
+  There aren't any Ruby versions installed under `/Users/<username>/.rbenv/versions'.
+  You can install Ruby versions like so: rbenv install 3.1.0
+Checking RubyGems settings: OK
+Auditing installed plugins: OK
+```
+
 ### 実行してバージョン確認してみる
 ```bash:title=command
 rbenv -v
