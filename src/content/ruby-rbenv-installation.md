@@ -85,8 +85,8 @@ set -Ux fish_user_paths $HOME/.rbenv/shims $fish_user_paths
 ruby-buildには必要なライブラリがあるので、[rbenv/ruby-build](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment)を参考にインストールしておいてください。
 
 ```bash:title=command
-mkdir -p "$(rbenv root)"/plugins
-git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+mkdir -p $HOME/.rbenv/plugins
+git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
 ```
 
 ### rbenvが正しく設定されていることを確認する
