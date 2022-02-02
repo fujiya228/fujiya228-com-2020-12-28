@@ -53,6 +53,23 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
 ```
 
+### rbenv shimsのパスを通す
+
+以下にあるコマンドから自分の使っている環境（シェル）にあったものを実行し、`rbenv shims`のパスを通します。
+
+```bash:title=bash
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+```
+```bash:title=Ubuntu Desktop
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bashrc
+```
+```bash:title=Zsh
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.zshrc
+```
+```bash:title=Fish shell
+set -Ux fish_user_paths $HOME/.rbenv/shims $fish_user_paths
+```
+
 ### シェルにrbenvを設定する
 ```bash:title=command
 ~/.rbenv/bin/rbenv init
