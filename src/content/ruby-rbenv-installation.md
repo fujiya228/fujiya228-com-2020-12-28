@@ -29,7 +29,7 @@ Rubyのバージョン管理ツールである`rbenv`のインストールの仕
 
 ### GitHubから~/.rbenvへクローン
 ```bash:title=command
-$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 ```
 必要があれば以下のコマンドで、bash拡張機能をコンパイルしてください。`rbenv`の高速化が可能です。
 ```bash:title=command
