@@ -74,7 +74,7 @@ set -Ux fish_user_paths $HOME/.nodenv/shims $fish_user_paths
 
 通常、一度シェルを閉じてまた開き直すことで反映されます。
 
-### ruby-buildをインストール
+### node-buildをインストール
 [node-build](https://github.com/nodenv/node-build#readme)は、`nodenv install` コマンドを提供するnodenvのプラグインです。いくつかインストール方法がありますが、今回はnodenvのプラグインへインストールします。
 
 ```bash:title=command
