@@ -122,7 +122,7 @@ echo 'status is-interactive; and pyenv init - | source' >> ~/.config/fish/config
 `pyenv doctor`を使って、チェックを行います。
 以下のコマンドでpyenv-doctorをインストールします。
 ```bash:title=command
-git clone https://github.com/pyenv/pyenv-doctor.git "~/.pyenv/plugins/pyenv-doctor"
+git clone https://github.com/pyenv/pyenv-doctor.git ~/.pyenv/plugins/pyenv-doctor
 ```
 
 ```bash:title=command
