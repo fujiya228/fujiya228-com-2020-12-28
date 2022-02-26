@@ -101,6 +101,15 @@ echo 'eval "$(pyenv init --path)"' >> ~/.profile
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
+#### fish
+
+```bash:title=fish
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+echo 'status is-login; and pyenv init --path | source' >> ~/.config/fish/config.fish
+echo 'status is-interactive; and pyenv init - | source' >> ~/.config/fish/config.fish
+```
+
 ### シェルを再起動して、PATHの変更を反映させる
 
 通常、一度シェルを閉じてまた開き直すことで反映されます。
