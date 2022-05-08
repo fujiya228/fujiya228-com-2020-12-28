@@ -22,3 +22,6 @@
 - id: Nodejs
   description: Articles about Node.js.
   image: ../img/taxonomy/nodejs-category.png
+- id: Flutter
+  description: Articles about Flutter.
+  image: ../img/taxonomy/flutter-category.png
