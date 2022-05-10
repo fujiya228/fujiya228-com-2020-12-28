@@ -37,6 +37,7 @@ SafeAreaで包んだ場合
 SafeAreaで包んでいない場合
 ![NotWrapWithSafeArea](img/flutter-NotWrapWithSafeArea.png)
 
+<div class="ads"></div>
 
 以下のコード：[GitHub](https://github.com/fujiya228/flutter_widget_of_the_week/blob/main/lib/widgets/pages/page001.dart)
 
@@ -80,3 +81,5 @@ class NotWrapWithSafeArea extends StatelessWidget {
   }
 }
 ```
+
+<div class="ads"></div>
