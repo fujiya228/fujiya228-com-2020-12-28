@@ -13,7 +13,7 @@ excerpt: Flutter Article
 ## はじめに
 
 この記事はFlutter Widget of the Weekで紹介されたWidgetを使ってみることを目的としてます。
-ざっくりとた使い方をコードとスクショをもとに紹介できたらと思います。
+ざっくりとした使い方をコードとスクショをもとに紹介できたらと思います。
 
 今回はSafeAreaです。
 
