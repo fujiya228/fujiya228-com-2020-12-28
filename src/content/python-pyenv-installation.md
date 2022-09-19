@@ -114,6 +114,8 @@ echo 'status is-interactive; and pyenv init - | source' >> ~/.config/fish/config
 
 通常、一度シェルを閉じてまた開き直すことで反映されます。
 
+<div class="ads"></div>
+
 ### Pythonのbuildの依存パッケージをインストール
 [pyenv/pyenv wiki](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)へ遷移し、それぞれのOS環境に合わせた依存パッケージをインストールしてください。
 
@@ -146,7 +148,7 @@ pyenv -v
 pyenv 2.2.4-1-4-g1e79a522
 ```
 
-### nodeをインストールする
+### pythonをインストールする
 ```bash:title=command
 pyenv install 14.18.0
 ```
