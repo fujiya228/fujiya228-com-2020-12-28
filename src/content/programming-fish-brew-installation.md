@@ -160,3 +160,4 @@ fishを起動するたびにパスを通し直すのは大変なので、fishの
 ```bash:title=command
 eval (/opt/homebrew/bin/brew shellenv)
 ```
+<div class="ads"></div>

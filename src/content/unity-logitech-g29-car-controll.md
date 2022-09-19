@@ -343,6 +343,8 @@ namespace LogitechSDK
 }
 ```
 
+<div class="ads"></div>
+
 ## CarUserControl.cs
 
 LogitechSDKの基本の関数の使い方で解説したものをもとにデフォルトを変更します。
@@ -426,6 +428,8 @@ Standard AssetsのCarプレハブ（Standard Assets > Vehicles > Car > Prefabs >
 また、CarControllerOriginalのWheelColliders、WheelMeshesにそれぞれCollider等をアタッチしておきます。
 
 ![car-controller-original-attach](img/car-controller-original-attach.png)
+
+<div class="ads"></div>
 
 ## 実際に走らせる
 

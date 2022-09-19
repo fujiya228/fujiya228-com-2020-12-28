@@ -70,6 +70,8 @@ echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.zshrc
 set -Ux fish_user_paths $HOME/.rbenv/shims $fish_user_paths
 ```
 
+<div class="ads"></div>
+
 ### シェルにrbenvを設定する
 ```bash:title=command
 ~/.rbenv/bin/rbenv init
@@ -105,6 +107,8 @@ Counting installed Ruby versions: none
 Checking RubyGems settings: OK
 Auditing installed plugins: OK
 ```
+
+<div class="ads"></div>
 
 ### 実行してバージョン確認してみる
 ```bash:title=command

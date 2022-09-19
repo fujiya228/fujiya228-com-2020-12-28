@@ -139,6 +139,8 @@ pyenv doctor
 Congratulations! You are ready to build pythons!
 ```
 
+<div class="ads"></div>
+
 ### 実行してバージョン確認してみる
 ```bash:title=command
 pyenv -v

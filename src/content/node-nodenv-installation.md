@@ -65,6 +65,8 @@ echo 'export PATH="$HOME/.nodenv/shims:$PATH"' >> ~/.zshrc
 set -Ux fish_user_paths $HOME/.nodenv/shims $fish_user_paths
 ```
 
+<div class="ads"></div>
+
 ### シェルにnodenvを設定する
 ```bash:title=command
 ~/.nodenv/bin/nodenv init
@@ -97,6 +99,8 @@ Counting installed Node versions: none
   You can install Node versions like so: nodenv install 2.2.4
 Auditing installed plugins: OK
 ```
+
+<div class="ads"></div>
 
 ### 実行してバージョン確認してみる
 ```bash:title=command
