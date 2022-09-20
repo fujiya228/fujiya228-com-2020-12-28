@@ -19,7 +19,6 @@ import { colors } from '../styles/colors';
 import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
-import TableOfContents from '../components/TableOfContents';
 import { Adsense } from '../components/Adsense';
 import { PostAside } from '../components/PostAside';
 import { adsenseReplace } from '../utils/AdsenseReplace';
@@ -223,7 +222,6 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </div>
           </div>
         </header>
-        <TableOfContents headings={post.headings} />
         <div css={[outer, PostMainColmun]}>
           <main id="site-main" className="site-main" css={[SiteMain, inner]}>
             {/* TODO: no-image css tag? */}
@@ -266,7 +264,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
               <PostContent htmlAst={post.htmlAst} />
             </article>
           </main>
-          <PostAside pathname={pathname} recentPosts={data.recentPosts} />
+          <PostAside pathname={pathname} headings={post.headings} />
         </div>
 
         <ReadNext
