@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 interface WrapperProps {
   className?: string;
+  children: any;
 }
 
 export const Wrapper: React.FC<WrapperProps> = ({ children, className }) => (
