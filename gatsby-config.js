@@ -77,7 +77,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
-    'gatsby-plugin-feed',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
