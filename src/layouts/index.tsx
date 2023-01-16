@@ -19,6 +19,7 @@ interface IndexProps {
     date: string;
     image: string;
   };
+  children: any;
 }
 
 const IndexLayout: React.FC<IndexProps> = props => {
