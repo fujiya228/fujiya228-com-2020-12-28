@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: 'https://fujiya228.com', // full path to blog - no ending slash
   },
   mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml.name',
   },
   plugins: [
     'gatsby-plugin-sitemap',
@@ -54,7 +54,7 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-abbr',
+          // 'gatsby-remark-abbr',
           {
             resolve: 'gatsby-remark-images',
             options: {
