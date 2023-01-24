@@ -68,29 +68,29 @@ my-project/
 
 [Terraformの最適（≠最強）なディレクトリ構成を考えてみた](https://zenn.dev/himekoh/articles/202208191916)
 
-> ```bash:title=Terraformの最適（≠最強）なディレクトリ構成
-> .
-> ├── env1
-> │   ├── backend.tf
-> │   ├── outputs.tf
-> │   ├── terraform.tfvars
-> │   └── variables.tf
-> │   ・・・
-> ├── env2
-> │   ├── backend.tf
-> │   ├── outputs.tf
-> │   ├── terraform.tfvars
-> │   └── variables.tf
-> │   ・・・
-> ├── modules
-> │   └── example1
-> │       ├── main.tf
-> │       ├── outputs.tf
-> │       └── variables.tf
-> └── shared
->     └── provider.tf
->     ・・・
-> ```
+ ```bash:title=Terraformの最適（≠最強）なディレクトリ構成
+ .
+ ├── env1
+ │   ├── backend.tf
+ │   ├── outputs.tf
+ │   ├── terraform.tfvars
+ │   └── variables.tf
+ │   ・・・
+ ├── env2
+ │   ├── backend.tf
+ │   ├── outputs.tf
+ │   ├── terraform.tfvars
+ │   └── variables.tf
+ │   ・・・
+ ├── modules
+ │   └── example1
+ │       ├── main.tf
+ │       ├── outputs.tf
+ │       └── variables.tf
+ └── shared
+     └── provider.tf
+     ・・・
+ ```
 
 ## まとめ
 
