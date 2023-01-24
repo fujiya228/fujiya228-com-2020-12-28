@@ -133,7 +133,7 @@ const Categories = ({ pageContext, data, location }: CategoryTemplateProps) => {
 export default Categories;
 
 export const pageQuery = graphql`
-  query($category: String) {
+  query ($category: String) {
     allCategoryYaml {
       edges {
         node {
@@ -151,8 +151,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { in: [$category] }, draft: { ne: true } } }
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {category: {in: [$category]}, draft: {ne: true}}}
     ) {
       totalCount
       edges {

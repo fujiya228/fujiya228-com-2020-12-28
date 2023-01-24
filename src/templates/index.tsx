@@ -125,27 +125,23 @@ const IndexPage: React.FC<IndexProps> = props => {
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
-    logo: file(relativePath: { eq: "img/logo.fin.png" }) {
+    logo: file(relativePath: {eq: "img/logo.fin.png"}) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
         fixed {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    header: file(relativePath: { eq: "img/logo.fin.png" }) {
+    header: file(relativePath: {eq: "img/logo.fin.png"}) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
         fixed(width: 2000, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { ne: true } } }
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {draft: {ne: true}}}
       limit: $limit
       skip: $skip
     ) {
