@@ -12,12 +12,17 @@ module.exports = {
     'AllMarkdownRemark.frontmatter.author': 'AuthorYaml.name',
   },
   plugins: [
-    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: '/',
+      }
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://fujiya228.com',
-        sitemap: 'https://fujiya228.com/sitemap.xml',
+        sitemap: 'https://fujiya228.com/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
