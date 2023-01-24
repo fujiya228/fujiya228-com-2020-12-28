@@ -25,3 +25,15 @@
 - id: Flutter
   description: Articles about Flutter.
   image: ../img/taxonomy/flutter-category.png
+- id: AWS
+  description: Articles about AWS.
+  image: ../img/taxonomy/aws-category.png
+- id: GCP
+  description: Articles about GCP.
+  image: ../img/taxonomy/gcp-category.png
+- id: PHP
+  description: Articles about PHP.
+  image: ../img/taxonomy/php-category.png
+- id: Terraform
+  description: Articles about Terraform.
+  image: ../img/taxonomy/terraform-category.png
