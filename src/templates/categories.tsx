@@ -35,6 +35,7 @@ interface CategoryTemplateProps {
       edges: Array<{
         node: {
           id: string;
+          name: string;
           description: string;
           image?: {
             childImageSharp: {
@@ -57,7 +58,7 @@ const Categories = ({ pageContext, data, location }: CategoryTemplateProps) => {
   const category = pageContext.category ? pageContext.category : '';
   const { edges, totalCount } = data.allMarkdownRemark;
   const categoryData = data.allCategoryYaml.edges.find(
-    n => n.node.id.toLowerCase() === category.toLowerCase(),
+    n => n.node.name.toLowerCase() === category.toLowerCase(),
   );
 
   return (
@@ -139,6 +140,7 @@ export const pageQuery = graphql`
         node {
           id
           description
+          name
           image {
             childImageSharp {
               fluid(maxWidth: 3720) {
