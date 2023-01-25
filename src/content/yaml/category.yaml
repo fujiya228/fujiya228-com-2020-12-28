@@ -37,3 +37,6 @@
 - id: Terraform
   description: Articles about Terraform.
   image: ../img/taxonomy/terraform-category.png
+- id: GitHub
+  description: Articles about GitHub.
+  image: ../img/taxonomy/github-category.png
