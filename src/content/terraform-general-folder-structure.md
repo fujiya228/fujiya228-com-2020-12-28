@@ -2,12 +2,12 @@
 layout: post
 title: 'Terraformの一般的なフォルダ構成例-Terraform'
 author: [Fujiya]
-tags: ['Terrafrom', 'フォルダ構成', 'ディレクトリ構成', '一般']
-category: Terrafrom
+tags: ['Terraform', 'フォルダ構成', 'ディレクトリ構成', '一般']
+category: Terraform
 image: 'img/taxonomy/terraform.png'
 date: '2023-01-25T03:10:30'
 draft: false
-excerpt: Terrafrom Article
+excerpt: Terraform Article
 ---
 
 ## 概要
