@@ -1,42 +1,42 @@
-- id: Python
+- name: Python
   description: Articles about Python.
   image: ../img/taxonomy/python-category.png
-- id: JavaScript
+- name: JavaScript
   description: Articles about JavaScript.
   image: ../img/taxonomy/javascript-category.png
-- id: Vuejs
+- name: Vuejs
   description: Articles about Vue.js.
   image: ../img/taxonomy/vuejs-category.png
-- id: Firebase
+- name: Firebase
   description: Articles about Firebase.
   image: ../img/taxonomy/firebase-category.png
-- id: Unity
+- name: Unity
   description: Articles about Unity.
   image: ../img/taxonomy/unity-category.png
-- id: Ruby
+- name: Ruby
   description: Articles about Ruby.
   image: ../img/taxonomy/ruby-category.png
-- id: Programming
+- name: Programming
   description: Articles about Programming.
   image: ../img/taxonomy/programming-category.png
-- id: Nodejs
+- name: Nodejs
   description: Articles about Node.js.
   image: ../img/taxonomy/nodejs-category.png
-- id: Flutter
+- name: Flutter
   description: Articles about Flutter.
   image: ../img/taxonomy/flutter-category.png
-- id: AWS
+- name: AWS
   description: Articles about AWS.
   image: ../img/taxonomy/aws-category.png
-- id: GCP
+- name: GCP
   description: Articles about GCP.
   image: ../img/taxonomy/gcp-category.png
-- id: PHP
+- name: PHP
   description: Articles about PHP.
   image: ../img/taxonomy/php-category.png
-- id: Terraform
+- name: Terraform
   description: Articles about Terraform.
   image: ../img/taxonomy/terraform-category.png
-- id: GitHub
+- name: GitHub
   description: Articles about GitHub.
   image: ../img/taxonomy/github-category.png
