@@ -108,6 +108,16 @@ gcloud auth login
 gcloud auth activate-service-account --key-file=PATH_TO_KEY_FILE
 ```
 
+### 認証情報の削除
+
+認証情報を削除するには、以下のコマンドを実行します。
+
+```bash:title=Command
+gcloud auth revoke
+```
+
+### 認証情報関連の操作
+
 その他認証関連の操作以下を参考にしてください。
 
 - [アカウントの一覧表示](https://cloud.google.com/sdk/docs/authorizing?hl=ja#list_accounts)
