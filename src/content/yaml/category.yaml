@@ -40,3 +40,6 @@
 - name: GitHub
   description: Articles about GitHub.
   image: ../img/taxonomy/github-category.png
+- name: Go
+  description: Articles about Go.
+  image: ../img/taxonomy/go-category.png
