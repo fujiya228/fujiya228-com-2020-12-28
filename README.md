@@ -13,5 +13,7 @@ This is a static blog generator and starter gatsby repo. A port of [Casper](http
 dateを設定する時のコマンド
 
 ```
-date "+%Y-%m-%dT%H:%M:%S"
+date "+%Y-%m-%dT%H:%M:%S" | pbcopy
 ```
+
+いずれは、コマンドテンプレート出力できるようにしたい
