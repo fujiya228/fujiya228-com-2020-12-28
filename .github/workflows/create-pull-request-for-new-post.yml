@@ -6,24 +6,11 @@ on:
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
-      with:
-        commit-message: Create Pull Request For New Post
-        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-        delete-branch: true
-        title: 'Create Pull Request For New Post'
-        body: |
-          related #
-
-          ## やったこと
-
-          _TODO_
-
-          ## やらなかったこと（敢えてやらなかったことがあれば。issueも作れると良いかも？）
-
-          _TODO_
-          
+      run:
+        gh pr create --title 'Create Pull Request For New Post' --body "`cat .github/pull_request_for_new_post_template.md`"
