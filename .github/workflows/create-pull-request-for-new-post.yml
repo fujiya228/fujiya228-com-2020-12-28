@@ -10,14 +10,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Create Pull Request
-      uses: actions/github-script@v6
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: peter-evans/create-pull-request@v4
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const title = `New PR from ${github.context.payload.sender.login}`;
-          const body = `
+        commit-message: Create Pull Request For New Post
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        delete-branch: true
+        title: 'Create Pull Request For New Post'
+        body: |
           related #
 
           ## やったこと
@@ -28,13 +27,3 @@ jobs:
 
           _TODO_
           
-          `;
-          const { data: pr } = await github.pulls.create({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            title,
-            body,
-            head: context.ref,
-            base: 'main'
-          });
-          console.log(`Created PR: ${pr.html_url}`);
