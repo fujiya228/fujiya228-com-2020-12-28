@@ -9,24 +9,26 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - name: Install dependencies
-      run: npm install marked
     - name: Create Pull Request
-      uses: actions/github-script@v3
+      uses: actions/github-script@v6
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const marked = require('marked');
-          const fs = require('fs');
           const title = `New PR from ${github.context.payload.sender.login}`;
-          const description = fs.readFileSync('.github/pull_request_for_new_post_template.md.md', 'utf8');
-          const body = marked(description);
+          const body = `
+          related #
+
+          ## やったこと
+
+          _TODO_
+
+          ## やらなかったこと（敢えてやらなかったことがあれば。issueも作れると良いかも？）
+
+          _TODO_
+          
+          `;
           const { data: pr } = await github.pulls.create({
             owner: context.repo.owner,
             repo: context.repo.repo,
